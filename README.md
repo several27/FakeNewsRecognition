@@ -20,5 +20,3 @@ Additionally, if time allows, the last step is to create a simple browser extens
 One of the most significant limitations of this work is the data that is openly available. The focus of this work is on using novel deep learning based approaches for natural language processing. Some of them (like LSTMs based on word embeddings) usually require large quantities of data. Therefore additional website crawling may be necessary. 
 
 Finally, the term “fake news” sometimes is associated with political views some people do not agree with. While we will do our best to make sure the datasets used for training contain actual information and are accurately classified, the purpose of this work is not to fact check all the input data to make sure initial labels are 100% correct.
-
-
