@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="88c2b9ae-c44a-47aa-8261-ed5b11c6e695" name="fnr-ec2" url="http://ec2-52-49-115-37.eu-west-1.compute.amazonaws.com">
-        <fileTransfer host="ec2-52-49-115-37.eu-west-1.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/Developer/FuseMind/researchably-eu-west-1.pem" rootFolder="/home/ubuntu" accessType="SFTP" keyPair="true">
+      <webServer id="88c2b9ae-c44a-47aa-8261-ed5b11c6e695" name="fnr-ec2" url="http://ec2-34-253-177-230.eu-west-1.compute.amazonaws.com">
+        <fileTransfer host="ec2-34-253-177-230.eu-west-1.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/Developer/FuseMind/researchably-eu-west-1.pem" rootFolder="/home/ubuntu" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
