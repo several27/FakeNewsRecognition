@@ -1,4 +1,5 @@
 import os
+from urllib.parse import urlsplit
 
 import scrapy
 from scrapy.http import TextResponse
@@ -20,14 +21,11 @@ class NewsScraper(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.domains = []
-        self.websites_url = []
-
-    def start_requests(self):
         df_websites = pd.read_excel(path_websites)
         self.domains = [u for u in df_websites[df_websites.result == 200].url.values]
         self.websites_url = ['http://' + u for u in self.domains]
 
+    def start_requests(self):
         for url in self.websites_url:
             yield scrapy.Request(url, self.parse)
 
@@ -35,6 +33,9 @@ class NewsScraper(scrapy.Spider):
         # article = newspaper.Article(response.url)
         # article.set_html(response.text)
         # article.parse()
+
+        if response.status != 200:
+            return
 
         yield {
             # 'title': article.title,
@@ -45,8 +46,24 @@ class NewsScraper(scrapy.Spider):
             'html': response.text
         }
 
-        for url in LxmlLinkExtractor(allow_domains=self.domains).extract_links(response):
+        for link in LxmlLinkExtractor(allow_domains=self.domains).extract_links(response):
+            split = urlsplit(link.url)
+            scheme = (split.scheme + '://') if len(split.scheme) > 1 else ''
+            if len(scheme) < 1 and len(split.netloc) > 1 and split.netloc[0] != '/':
+                scheme = '//'
+
+            url = scheme + split.netloc + split.path
+
             yield response.follow(url, callback=self.parse)
+
+        # parent_netloc = urlsplit(response.url).netloc
+        # for url in response.css('a::attr(href)').extract():
+        #
+        #     if len(url) > 1 and (parent_netloc == split.netloc or (url[0] == '/' and url[1] != '/')):
+        #         scheme = (split.scheme + '://') if len(split.scheme) > 1 else '/'
+        #         url = scheme + split.netloc + split.path
+        #
+        #         yield response.follow(url, callback=self.parse)
 
         # for url in response.css('a::attr(href)').extract():
         #     if len(url) > 1 and (urlsplit(response.url).netloc == urlsplit(url).netloc or
@@ -55,5 +72,3 @@ class NewsScraper(scrapy.Spider):
         # for url in LinkExtractor(allow_domains=domain, tags=('a',), attrs=('href',)).extract_links(response):
         #     print('---', url)
         #     yield response.follow(url, callback=self.parse)
-
-

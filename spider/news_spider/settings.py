@@ -14,9 +14,9 @@ BOT_NAME = 'news_spider'
 SPIDER_MODULES = ['news_spider.spiders']
 NEWSPIDER_MODULE = 'news_spider.spiders'
 
-FEED_FORMAT = 'jsonlines'
-FEED_URI = 's3://researchably-fake-news-recognition/7_opensources_co/spider_feed.jl'
-FEED_EXPORT_ENCODING = 'utf-8'
+# FEED_FORMAT = 'jsonlines'
+# FEED_URI = 's3://researchably-fake-news-recognition/7_opensources_co/spider_feed.jl'
+# FEED_EXPORT_ENCODING = 'utf-8'
 
 LOG_LEVEL = 'INFO'
 LOG_FILE = '../data/7_opensources_co/news_spider.log'
@@ -27,10 +27,10 @@ JOBDIR = '../data/7_opensources_co/news_spider_job/'
 #USER_AGENT = 'news_spider (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 128
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
@@ -72,9 +72,10 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 8
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'news_spider.pipelines.NewsSpiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'news_spider.pipelines.NewsSpiderDropPipeline': 250,
+    'news_spider.pipelines.NewsSpiderPersistencePipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
