@@ -61,7 +61,7 @@ class NewsSpiderPersistencePipeline(object):
     def __init__(self):
         self.items = []
         with open('../data/7_opensources_co/scraped_pages_urls.json', 'r') as _in:
-            self.scraped_urls = ujson.load(_in)
+            self.scraped_urls = set(ujson.load(_in))
 
     def process_item(self, item, scraper):
         if item['url'] in self.scraped_urls:
