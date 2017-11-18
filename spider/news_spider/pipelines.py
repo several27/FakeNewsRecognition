@@ -10,6 +10,7 @@ import os
 from datetime import datetime
 from urllib.parse import urlsplit
 
+import ujson
 from peewee import Model
 from playhouse.postgres_ext import PostgresqlExtDatabase, DateTimeField, CharField, TextField, IntegerField
 from scrapy.exceptions import DropItem
@@ -59,8 +60,13 @@ class NewsSpiderDropPipeline:
 class NewsSpiderPersistencePipeline(object):
     def __init__(self):
         self.items = []
+        with open('data/7_opensources_co/scraped_pages_urls.json', 'r') as _in:
+            self.scraped_urls = ujson.load(_in)
 
     def process_item(self, item, scraper):
+        if item['url'] in self.scraped_urls:
+            return item
+
         self.items.append({
             'batch': 2,
             'url': item['url'],
