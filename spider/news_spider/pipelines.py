@@ -68,7 +68,7 @@ class NewsSpiderPersistencePipeline(object):
             return item
 
         self.items.append({
-            'batch': 2,
+            'batch': 3,
             'url': item['url'],
             'html': item['html'].replace('\x00', '')
         })
