@@ -82,6 +82,9 @@ class NewsSpiderPersistencePipeline(object):
         self.process_bulk()
 
     def process_bulk(self):
+        if peewee_database.is_closed():
+            peewee_database.connect()
+
         with peewee_database.atomic():
             ScrapedPage.insert_many(self.items).execute()
 
