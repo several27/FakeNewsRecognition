@@ -18,10 +18,14 @@ path_logger = path_7_fn + 'news_spider.log'
 class NewsScraper(scrapy.Spider):
     name = 'news'
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, websites_start=0, websites_end=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         df_websites = pd.read_excel(path_websites)
+        if websites_end is None:
+            websites_end = len(df_websites)
+
+        df_websites = df_websites[websites_start:websites_end]
         self.domains = [u for u in df_websites[df_websites.result == 200].url.values]
         self.websites_url = ['http://' + u for u in self.domains]
 
