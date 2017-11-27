@@ -25,7 +25,7 @@ class NewsScraper(scrapy.Spider):
         if websites_end is None:
             websites_end = len(df_websites)
 
-        df_websites = df_websites[websites_start:websites_end]
+        df_websites = df_websites[int(websites_start):int(websites_end)]
         self.domains = [u for u in df_websites[df_websites.result == 200].url.values]
         self.websites_url = ['http://' + u for u in self.domains]
 
