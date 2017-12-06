@@ -20,3 +20,23 @@ Additionally, if time allows, the last step is to create a simple browser extens
 One of the most significant limitations of this work is the data that is openly available. The focus of this work is on using novel deep learning based approaches for natural language processing. Some of them (like LSTMs based on word embeddings) usually require large quantities of data. Therefore additional website crawling may be necessary. 
 
 Finally, the term “fake news” sometimes is associated with political views some people do not agree with. While we will do our best to make sure the datasets used for training contain actual information and are accurately classified, the purpose of this work is not to fact check all the input data to make sure initial labels are 100% correct.
+
+# Scraper
+
+```bash
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.1" -s JOBDIR="../data/7_opensources_co/news_spider_job_1/" -a websites_start=0 -a websites_end=125
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.2" -s JOBDIR="../data/7_opensources_co/news_spider_job_2/" -a websites_start=125 -a websites_end=250
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.3" -s JOBDIR="../data/7_opensources_co/news_spider_job_3/" -a websites_start=250 -a websites_end=375
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.4" -s JOBDIR="../data/7_opensources_co/news_spider_job_4/" -a websites_start=375 -a websites_end=500
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.5" -s JOBDIR="../data/7_opensources_co/news_spider_job_5/" -a websites_start=500 -a websites_end=625
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.6" -s JOBDIR="../data/7_opensources_co/news_spider_job_6/" -a websites_start=625 -a websites_end=750
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.7" -s JOBDIR="../data/7_opensources_co/news_spider_job_7/" -a websites_start=750 -a websites_end=875
+
+scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.8" -s JOBDIR="../data/7_opensources_co/news_spider_job_8/" -a websites_start=875
+```
