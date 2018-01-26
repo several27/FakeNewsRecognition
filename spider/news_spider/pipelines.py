@@ -4,30 +4,18 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-import os
-import random
+import json
 from datetime import datetime
+from typing import Set
 from urllib.parse import urlsplit
 
 import ujson
-
-import gevent.monkey
-from psycopg2.extras import RealDictCursor
-from peewee import Model
-from playhouse.postgres_ext import PostgresqlExtDatabase, DateTimeField, CharField, TextField, IntegerField
+from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase, DoesNotExist
 from scrapy.exceptions import DropItem
-from tqdm import tqdm
 
 from .spiders import NewsScraper
 
-peewee_database = PostgresqlExtDatabase(os.environ['RESEARCHABLY_DB_NAME'], **{
-    'host': os.environ['RESEARCHABLY_DB_HOST'],
-    'user': os.environ['RESEARCHABLY_DB_USER'],
-    'password': os.environ['RESEARCHABLY_DB_PASSWORD'],
-    'register_hstore': False
-})
+peewee_database = SqliteDatabase('../data/7_opensources_co/news_spider.db')
 
 
 class BaseModel(Model):
@@ -42,63 +30,72 @@ class ScrapedPage(BaseModel):
     inserted_at = DateTimeField(null=False, default=datetime.now())
     updated_at = DateTimeField(null=False, default=datetime.now())
 
+    # cache
+    _cache_urls = None  # type: Set[str]
+
+    @staticmethod
+    def url_exists(url):
+        if ScrapedPage._cache_urls is None:
+            print('Getting all urls...')
+            last_id = 0
+            all_scraped = []
+            while True:
+                scraped = list(ScrapedPage
+                               .select(ScrapedPage.id, ScrapedPage.url)
+                               .where(ScrapedPage.id > last_id)
+                               .order_by(ScrapedPage.id.asc())
+                               .limit(100 * 1000))
+                if len(scraped) <= 0:
+                    break
+
+                all_scraped += [sp.url for sp in scraped]
+                last_id = scraped[-1].id
+
+                print('Got %s with id: %s' % (len(all_scraped), last_id))
+
+            ScrapedPage._cache_urls = set(all_scraped)
+            print('Unique urls: %s' % len(ScrapedPage._cache_urls))
+
+        return url in ScrapedPage._cache_urls
+
+    # @staticmethod
+    # def url_exists(url):
+    #     if ScrapedPage._urls_trie is None:
+    #         print('Getting all urls...')
+    #         with open('../data/7_opensources_co/news_spider.db.json', 'r') as _in:
+    #             ScrapedPage._urls_trie = set(json.load(_in))
+    #
+    #         print('Unique urls: %s' % len(ScrapedPage._urls_trie))
+    #
+    #     return url in ScrapedPage._urls_trie
+
     class Meta:
         db_table = 'fnr_scraped_pages'
 
-
-def big_select_query(query, batch_size=100 * 1000):
-    peewee_database.connect()
-
-    cursor = peewee_database._local.conn.cursor(cursor_factory=RealDictCursor)
-    cursor_name = 'task_big_query' + str(random.randint(1, 1000 * 1000))
-    cursor.execute('begin; declare ' + cursor_name + ' cursor for ' + query.sql()[0], query.sql()[1])
-
-    while True:
-        cursor.execute('fetch ' + str(batch_size) + ' from ' + cursor_name + ' ;')
-        batch_results = cursor.fetchall()
-
-        if len(batch_results) <= 0:
-            break
-
-        for row in batch_results:
-            yield row
+        indexes = (
+            # Specify a unique multi-column index on from/to-user.
+            (('batch', 'url'), True),
+        )
 
 
 class NewsSpiderDropPipeline:
     def __init__(self):
         self.netlocs = set()
-        self.existing_urls = set()
+        ScrapedPage.url_exists('')
 
     def open_spider(self, spider: NewsScraper):
         for u in spider.websites_url:
             self.netlocs.add(urlsplit(u).netloc.lower())
 
-        self.existing_urls = self.query_for_scraped_urls()
-
     def process_item(self, item, spider):
         url = item['url'].replace('www.', '').lower()
-        if urlsplit(url).netloc not in self.netlocs or item['url'][:50] in self.existing_urls:
+        if urlsplit(url).netloc not in self.netlocs or ScrapedPage.url_exists(item['url']):
             item['html'] = None
             raise DropItem()
 
-        self.existing_urls.add(item['url'])
+        ScrapedPage._cache_urls.add(item['url'])
 
         return item
-
-    @staticmethod
-    def query_for_scraped_urls():
-        print('Querying already scraped urls...')
-
-        urls = set()
-        gevent.monkey.patch_all(thread=False)
-        for page in tqdm(big_select_query(ScrapedPage.select(ScrapedPage.url)
-                                                  .where((ScrapedPage.batch == 2) | (ScrapedPage.batch == 3) |
-                                                         (ScrapedPage.batch == 4) | (ScrapedPage.batch == 5)))):
-            urls.add(page['url'][:50])
-
-        print('Querying already scraped urls... Finished!')
-
-        return urls
 
 
 class NewsSpiderPersistencePipeline(object):
@@ -107,7 +104,7 @@ class NewsSpiderPersistencePipeline(object):
 
     def process_item(self, item, scraper):
         self.items.append({
-            'batch': 5,
+            'batch': 2,
             'url': item['url'],
             'html': item['html'].replace('\x00', '')
         })

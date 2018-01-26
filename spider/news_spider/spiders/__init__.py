@@ -59,20 +59,3 @@ class NewsScraper(scrapy.Spider):
             url = scheme + split.netloc + split.path
 
             yield response.follow(url, callback=self.parse)
-
-        # parent_netloc = urlsplit(response.url).netloc
-        # for url in response.css('a::attr(href)').extract():
-        #
-        #     if len(url) > 1 and (parent_netloc == split.netloc or (url[0] == '/' and url[1] != '/')):
-        #         scheme = (split.scheme + '://') if len(split.scheme) > 1 else '/'
-        #         url = scheme + split.netloc + split.path
-        #
-        #         yield response.follow(url, callback=self.parse)
-
-        # for url in response.css('a::attr(href)').extract():
-        #     if len(url) > 1 and (urlsplit(response.url).netloc == urlsplit(url).netloc or
-        #                          (url[0] == '/' and url[1] != '/')):
-
-        # for url in LinkExtractor(allow_domains=domain, tags=('a',), attrs=('href',)).extract_links(response):
-        #     print('---', url)
-        #     yield response.follow(url, callback=self.parse)
