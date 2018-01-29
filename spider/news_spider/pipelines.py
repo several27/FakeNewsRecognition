@@ -4,13 +4,11 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-import json
 from datetime import datetime
 from typing import Set
 from urllib.parse import urlsplit
 
-import ujson
-from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase, DoesNotExist
+from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase
 from scrapy.exceptions import DropItem
 
 from .spiders import NewsScraper
@@ -57,17 +55,6 @@ class ScrapedPage(BaseModel):
             print('Unique urls: %s' % len(ScrapedPage._cache_urls))
 
         return url in ScrapedPage._cache_urls
-
-    # @staticmethod
-    # def url_exists(url):
-    #     if ScrapedPage._urls_trie is None:
-    #         print('Getting all urls...')
-    #         with open('../data/7_opensources_co/news_spider.db.json', 'r') as _in:
-    #             ScrapedPage._urls_trie = set(json.load(_in))
-    #
-    #         print('Unique urls: %s' % len(ScrapedPage._urls_trie))
-    #
-    #     return url in ScrapedPage._urls_trie
 
     class Meta:
         db_table = 'fnr_scraped_pages'
