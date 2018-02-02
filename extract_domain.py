@@ -28,12 +28,18 @@ def fetch_pages(last_id, batch_size):
 def main():
     # scraped_count = ScrapedPage.select(fn.Count(ScrapedPage.id)).where(ScrapedPage.batch == 2)
 
-    last_id = 402402
+    last_id = 0
     batch_size = 100 * 1000
     urls_domains_not_found = []
 
     df_websites = pd.read_excel('data/7_opensources_co/websites_with_results.xlsx')
     domains = [u for u in df_websites.url.values]
+
+    domain_type = {}
+    websites_url = df_websites.url.values
+    websites_type = df_websites.type.values
+    for i, url in enumerate(websites_url):
+        domain_type[url] = websites_type[i]
 
     print('Processing')
     with open('data/7_opensources_co/news_cleaned_2018_01_29_missing_domains.csv', 'w') as out_missing_domains:
@@ -52,6 +58,8 @@ def main():
                     domain = urlsplit(page.url).netloc
 
                 page.domain = domain
+                page.type = domain_type[page.domain] if page.domain in domain_type else None
+
                 pages_to_save.append(page)
 
                 if len(pages_to_save) > 1000:

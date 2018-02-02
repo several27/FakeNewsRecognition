@@ -8,8 +8,9 @@ from datetime import datetime
 from typing import Set
 from urllib.parse import urlsplit
 
-from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase
+import pybloom_live
 from scrapy.exceptions import DropItem
+from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase
 
 from .spiders import NewsScraper
 
@@ -29,7 +30,7 @@ class ScrapedPage(BaseModel):
     updated_at = DateTimeField(null=False, default=datetime.now())
 
     # cache
-    _cache_urls = None  # type: Set[str]
+    _cache_urls = None  # type: pybloom_live.ScalableBloomFilter
 
     @staticmethod
     def url_exists(url):
@@ -51,7 +52,11 @@ class ScrapedPage(BaseModel):
 
                 print('Got %s with id: %s' % (len(all_scraped), last_id))
 
-            ScrapedPage._cache_urls = set(all_scraped)
+            ScrapedPage._cache_urls = pybloom_live.ScalableBloomFilter(
+                mode=pybloom_live.ScalableBloomFilter.SMALL_SET_GROWTH)
+            for url in all_scraped:
+                ScrapedPage._cache_urls.add(url)
+
             print('Unique urls: %s' % len(ScrapedPage._cache_urls))
 
         return url in ScrapedPage._cache_urls

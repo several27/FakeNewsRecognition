@@ -65,6 +65,7 @@ class Page(BaseModel):
     scraped_page_id = IntegerField(null=False)
     batch = IntegerField(null=False)
     domain = CharField(null=False)
+    type = CharField(null=False)
     url = CharField(null=False)
     content = TextField(null=False)
     scraped_at = DateTimeField(null=False)
