@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="376d5973-77b5-4742-a43c-a4fe2ab870df" name="fnr-azure-s27" url="http://52.166.167.163">
+        <fileTransfer host="52.166.167.163" port="22" privateKey="$USER_HOME$/.ssh/fusemind-dev" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
