@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="fnr-azure-fm">
-    <serverData>
-      <paths name="fnr-azure-fm">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/FakeNewsRecognition" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="fnr-azure-s27">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/FakeNewsRecognition" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-    </serverData>
+  <component name="PublishConfigData" autoUpload="Always">
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

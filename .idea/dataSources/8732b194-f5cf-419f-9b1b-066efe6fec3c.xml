@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="news_cleaned_2018_01_29+postgres.db">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="4" parent="3" name="fnr_pages"/>
+    <column id="5" parent="4" name="id">
+      <DataType>INTEGER(2000000000,10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="6" parent="4" name="scraped_page_id">
+      <Position>1</Position>
+      <DataType>INTEGER(2000000000,10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="7" parent="4" name="batch">
+      <Position>2</Position>
+      <DataType>INTEGER(2000000000,10)|4</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="8" parent="4" name="url">
+      <Position>3</Position>
+      <DataType>VARCHAR(255) (2000000000,10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="9" parent="4" name="content">
+      <Position>4</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="10" parent="4" name="scraped_at">
+      <Position>5</Position>
+      <DataType>DATETIME(2000000000,10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="11" parent="4" name="inserted_at">
+      <Position>6</Position>
+      <DataType>DATETIME(2000000000,10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="4" name="updated_at">
+      <Position>7</Position>
+      <DataType>DATETIME(2000000000,10)|12</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="4" name="title">
+      <Position>8</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="14" parent="4" name="authors">
+      <Position>9</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="15" parent="4" name="keywords">
+      <Position>10</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="16" parent="4" name="meta_keywords">
+      <Position>11</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="17" parent="4" name="meta_description">
+      <Position>12</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="18" parent="4" name="tags">
+      <Position>13</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="19" parent="4" name="summary">
+      <Position>14</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+    </column>
+    <column id="20" parent="4" name="domain">
+      <Position>15</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="21" parent="4" name="type">
+      <Position>16</Position>
+      <DataType>TEXT(2000000000,10)|12</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <key id="22" parent="4">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -29,5 +29,33 @@
       <auth-required>false</auth-required>
       <introspection-schemas>*:main</introspection-schemas>
     </data-source>
+    <data-source name="news_cleaned_postgres.sqlite" uuid="3e4d3676-518d-48cc-a94c-bb70b39ce216">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>:</introspection-schemas>
+    </data-source>
+    <data-source name="webhose.sqlite" uuid="c33db1be-358d-464e-a284-b3289fc7d549">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
+    <data-source name="news_cleaned_2018_01_29+postgres.db" uuid="8732b194-f5cf-419f-9b1b-066efe6fec3c">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>:</introspection-schemas>
+    </data-source>
+    <data-source name="news_cleaned_2018_01_29+postgres+nytimes+webhose.db" uuid="5e3b567b-e713-4b65-9eb4-f2de17bd8c41">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <introspection-schemas>:</introspection-schemas>
+    </data-source>
   </component>
 </project>

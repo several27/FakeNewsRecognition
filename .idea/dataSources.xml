@@ -37,5 +37,41 @@
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="news_cleaned_postgres.sqlite" uuid="3e4d3676-518d-48cc-a94c-bb70b39ce216">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_postgres.db</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="webhose.sqlite" uuid="c33db1be-358d-464e-a284-b3289fc7d549">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/webhose/news_cleaned_webhose.db</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="news_cleaned_2018_01_29+postgres.db" uuid="8732b194-f5cf-419f-9b1b-066efe6fec3c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_2018_01_29+postgres.db</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="news_cleaned_2018_01_29+postgres+nytimes+webhose.db" uuid="5e3b567b-e713-4b65-9eb4-f2de17bd8c41">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_2018_01_29+postgres+nytimes+webhose.db</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

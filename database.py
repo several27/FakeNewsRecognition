@@ -4,7 +4,7 @@ from typing import Set
 from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase
 
 raw_peewee_database = SqliteDatabase('data/7_opensources_co/news_spider_2018_01_29.db')
-peewee_database = SqliteDatabase('data/7_opensources_co/news_cleaned_2018_01_29.db')
+peewee_database = SqliteDatabase('data/7_opensources_co/news_cleaned_postgres.db')
 
 
 class RawBaseModel(Model):
@@ -65,8 +65,9 @@ class Page(BaseModel):
     scraped_page_id = IntegerField(null=False)
     batch = IntegerField(null=False)
     domain = CharField(null=False)
-    type = CharField(null=False)
+    type = CharField(null=True)
     url = CharField(null=False)
+    source = CharField(null=True)
     content = TextField(null=False)
     scraped_at = DateTimeField(null=False)
     inserted_at = DateTimeField(null=False, default=datetime.now())
