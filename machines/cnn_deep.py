@@ -1,7 +1,5 @@
 import csv
-import ujson
 
-import numpy as np
 import tensorflow as tf
 from gensim.models.fasttext import FastText
 from keras.callbacks import ModelCheckpoint
@@ -10,20 +8,14 @@ from keras.models import Model
 from keras.optimizers import Adam
 from tqdm import tqdm
 
+from machines.data_generator import embedded_news_generator, path_data, path_news_train, path_news_val, path_fasttext, \
+    path_news_shuffled
+
 """
 From "2018-02-17 - FakeNewsCorpus Simple CNN.ipynb" notebook
 """
 
 csv.field_size_limit(500 * 1024 * 1024)
-
-path_data = 'data/fake_news_corpus/'
-path_news_csv = path_data + 'news_cleaned_2018_02_13.csv'
-path_fasttext = path_data + 'news_cleaned_2018_02_13.fasttext.bin'
-path_news_preprocessed = path_data + 'news_cleaned_2018_02_13.preprocessed.jsonl'
-path_news_shuffled = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.jsonl'
-path_news_train = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.train.jsonl'
-path_news_test = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.test.jsonl'
-path_news_val = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.val.jsonl'
 
 path_news_embedded = path_data + 'news_cleaned_2018_02_13.embedded.jsonl'
 
@@ -32,37 +24,6 @@ input_shape = max_words, 100
 
 batch_size = 64
 epochs = 5
-
-
-def _news_generator_process_line(line, fasttext):
-    article = ujson.loads(line)
-
-    embedding = np.zeros((max_words, 100))
-    for i, word in enumerate(article['content'][:max_words]):
-        if word in fasttext:
-            embedding[i] = fasttext[word]
-
-    return embedding, article['label']
-
-
-def news_generator(path, batch, fasttext):
-    while True:
-        with open(path, 'r') as in_news:
-            batch_i = 0
-            batch_embedding = np.zeros((batch, max_words, 100))
-            batch_label = np.zeros((batch, 1))
-            for line in in_news:
-                embedding, label = _news_generator_process_line(line, fasttext)
-
-                if (batch_i + 1) == batch:
-                    yield batch_embedding, batch_label
-                    batch_embedding = np.zeros((batch, max_words, 100))
-                    batch_label = np.zeros((batch, 1))
-                    batch_i = 0
-                else:
-                    batch_embedding[batch_i] = embedding
-                    batch_label[batch_i, 0] = label
-                    batch_i += 1
 
 
 def cnn_deep_model(filters=512, drop=0.5, filter_sizes=(3, 4, 5)):
@@ -92,7 +53,7 @@ def cnn_deep_model(filters=512, drop=0.5, filter_sizes=(3, 4, 5)):
     return model
 
 
-def main():
+def train():
     print('Loading fasttext...')
     fasttext = FastText.load_fasttext_format(path_fasttext)
 
@@ -113,11 +74,18 @@ def main():
         cnn_model = cnn_deep_model()
         checkpoint = ModelCheckpoint(path_data + 'cnn_deep_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
                                      verbose=1, mode='auto')
-        cnn_model.fit_generator(news_generator(path_news_train, batch_size, fasttext),
+        cnn_model.fit_generator(embedded_news_generator(path_news_train, batch_size, fasttext, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
-                                validation_data=news_generator(path_news_val, batch_size, fasttext),
+                                validation_data=embedded_news_generator(path_news_val, batch_size, fasttext, max_words),
                                 validation_steps=val_size // batch_size, callbacks=[checkpoint])
 
 
+def test():
+    print('Loading fasttext...')
+    fasttext = FastText.load_fasttext_format(path_fasttext)
+    cnn_model = cnn_deep_model()
+    cnn_model.load_weights(path_data + 'cnn_deep_weights.000-0.4900.hdf5')
+
+
 if __name__ == '__main__':
-    main()
+    train()
