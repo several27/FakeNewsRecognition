@@ -5,8 +5,7 @@ import numpy as np
 import tensorflow as tf
 from gensim.models.fasttext import FastText
 from keras.callbacks import ModelCheckpoint
-from keras.layers import Concatenate, Dropout, Activation, Flatten
-from keras.layers import Input, Dense, Conv1D, MaxPool1D
+from keras.layers import Concatenate, Dropout, Activation, Flatten, Input, Dense, Conv1D, MaxPool1D
 from keras.models import Model
 from keras.optimizers import Adam
 from tqdm import tqdm
@@ -28,11 +27,8 @@ path_news_val = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.val.j
 
 path_news_embedded = path_data + 'news_cleaned_2018_02_13.embedded.jsonl'
 
-max_words = 200
+max_words = 300
 input_shape = max_words, 100
-
-kernel_size = 3
-hidden_dims = 250
 
 batch_size = 64
 epochs = 5
@@ -109,6 +105,8 @@ def main():
     train_size = int(count_lines * .8)
     test_size = int(count_lines * .8)
     val_size = count_lines - (int(count_lines * 0.8) + int(count_lines * 0.1))
+
+    print('Train size:', train_size, '; test size:', test_size, '; val size:', val_size)
 
     print('Training...')
     with tf.device('/gpu:0'):
