@@ -34,29 +34,31 @@ path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 def _news_generator_process_line(line, fasttext, max_words):
     article = ujson.loads(line)
 
-    embedding = np.zeros((max_words, 100))
+    embedding = []
     for i, word in enumerate(article['content'][:max_words]):
         if word in fasttext:
-            embedding[i] = fasttext[word]
+            embedding.append(fasttext[word])
 
-    return embedding, article['label']
+    return np.array(embedding), article['label']
 
 
 def embedded_news_generator(path, batch, fasttext, max_words):
     while True:
         with open(path, 'r') as in_news:
             batch_i = 0
-            batch_embedding = []
             batch_label = []
+            batch_embedding = []
             for line in in_news:
                 embedding, label = _news_generator_process_line(line, fasttext, max_words)
-                batch_embedding.append(embedding)
+
                 batch_label.append(label)
+                batch_embedding.append(embedding)
 
                 if batch_i == batch:
                     yield np.array(batch_embedding), np.array(batch_label)
-                    batch_embedding = []
+
                     batch_label = []
+                    batch_embedding = []
                 else:
                     batch_i += 1
 
