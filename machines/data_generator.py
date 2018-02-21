@@ -25,6 +25,7 @@ path_news_train = path_news_cleaned + '.preprocessed.shuffled.train.jsonl'
 path_news_test = path_news_cleaned + '.preprocessed.shuffled.test.jsonl'
 path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 
+
 # path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
 # path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
 # path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
@@ -45,19 +46,18 @@ def embedded_news_generator(path, batch, fasttext, max_words):
     while True:
         with open(path, 'r') as in_news:
             batch_i = 0
-            batch_embedding = np.zeros((batch, max_words, 100))
-            batch_label = np.zeros((batch, 1))
+            batch_embedding = []
+            batch_label = []
             for line in in_news:
                 embedding, label = _news_generator_process_line(line, fasttext, max_words)
+                batch_embedding.append(embedding)
+                batch_label.append(label)
 
-                if (batch_i + 1) == batch:
-                    yield batch_embedding, batch_label
-                    batch_embedding = np.zeros((batch, max_words, 100))
-                    batch_label = np.zeros((batch, 1))
-                    batch_i = 0
+                if batch_i == batch:
+                    yield np.array(batch_embedding), np.array(batch_label)
+                    batch_embedding = []
+                    batch_label = []
                 else:
-                    batch_embedding[batch_i] = embedding
-                    batch_label[batch_i, 0] = label
                     batch_i += 1
 
 
