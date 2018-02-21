@@ -39,7 +39,7 @@ def _news_generator_process_line(line, fasttext, max_words):
         if word in fasttext:
             embedding.append(fasttext[word])
 
-    return np.array(embedding), article['label']
+    return np.asarray(embedding), article['label']
 
 
 def embedded_news_generator(path, batch, fasttext, max_words):
@@ -54,9 +54,10 @@ def embedded_news_generator(path, batch, fasttext, max_words):
                 batch_label.append(label)
                 batch_embedding.append(embedding)
 
-                if batch_i == batch:
-                    yield np.array(batch_embedding), np.array(batch_label)
+                if (batch_i + 1) == batch:
+                    yield np.asarray(batch_embedding), np.asarray(batch_label)
 
+                    batch_i = 0
                     batch_label = []
                     batch_embedding = []
                 else:
