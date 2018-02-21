@@ -54,6 +54,9 @@ def cnn_deep_model(filters=512, drop=0.5, filter_sizes=(3, 4, 5)):
 
 
 def cnn_deep_model_2(filters=10, dropout_prob=(0.5, 0.8), filter_sizes=(3, 8), hidden_dims=50):
+    # https://github.com/alexander-rakhlin/CNN-for-Sentence-Classification-in-Keras/blob/master/sentiment_cnn.py
+    # https://arxiv.org/pdf/1408.5882v2.pdf
+
     model_input = Input(shape=input_shape)
     z = Dropout(dropout_prob[0])(model_input)
 
