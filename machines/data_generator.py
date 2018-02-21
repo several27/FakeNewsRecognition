@@ -14,18 +14,21 @@ from tqdm import tqdm
 csv.field_size_limit(500 * 1024 * 1024)
 
 path_data = os.environ['FNR_PATH_DATA'] if 'FNR_PATH_DATA' in os.environ else 'data/fake_news_corpus/'
-path_news_csv = path_data + 'news_cleaned_2018_02_13.csv'
-path_fasttext = path_data + 'news_cleaned_2018_02_13.fasttext.bin'
-path_news_preprocessed = path_data + 'news_cleaned_2018_02_13.preprocessed.jsonl'
-path_news_shuffled = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.jsonl'
+news_cleaned_version = 'news_cleaned_2018_02_13'
+path_news_cleaned = path_data + news_cleaned_version
 
-path_news_train = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.train.jsonl'
-path_news_test = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.test.jsonl'
-path_news_val = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.val.jsonl'
+path_news_csv = path_news_cleaned + '.csv'
+path_fasttext = path_news_cleaned + '.fasttext.bin'
+path_news_preprocessed = path_news_cleaned + '.preprocessed.jsonl'
+path_news_shuffled = path_news_cleaned + '.preprocessed.shuffled.jsonl'
 
-path_news_train_embedded = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.embedded.train.jsonl'
-path_news_test_embedded = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.embedded.test.jsonl'
-path_news_val_embedded = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.embedded.val.jsonl'
+path_news_train = path_news_cleaned + '.preprocessed.shuffled.train.jsonl'
+path_news_test = path_news_cleaned + '.preprocessed.shuffled.test.jsonl'
+path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
+
+path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
+path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
+path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
 
 
 def _news_generator_process_line(line, fasttext, max_words):
@@ -131,11 +134,13 @@ def prepare_data():
     fasttext = FastText.load_fasttext_format(path_fasttext)
 
     print('Embedding...')
+    max_words = 300
+
     for path, path_embedded in [(path_news_train, path_news_train_embedded),
                                 (path_news_test, path_news_test_embedded),
                                 (path_news_val, path_news_val_embedded)]:
         with open(path_embedded, 'w') as out_embedded:
-            for embedding, label in embedded_news_generator(path, 1, fasttext):
+            for embedding, label in embedded_news_generator(path, 1, fasttext, max_words):
                 out_embedded.write(ujson.dumps({'embedding': embedding, 'label': label}))
 
 

@@ -44,7 +44,7 @@
       <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
+            <state relative-caret-position="1144">
               <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="83" selection-end-column="59" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -56,8 +56,8 @@
       <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+            <state relative-caret-position="556">
+              <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -551,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519239012057</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Data generator - embedding">
+      <created>1519250242770</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1519250242770</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -610,7 +617,8 @@
     <MESSAGE value="CSV and model fixes" />
     <MESSAGE value="path data fix" />
     <MESSAGE value="Some ifs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some ifs" />
+    <MESSAGE value="Data generator - embedding" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data generator - embedding" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -968,7 +976,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
+        <state relative-caret-position="1144">
           <caret line="82" column="4" lean-forward="false" selection-start-line="82" selection-start-column="4" selection-end-line="83" selection-end-column="59" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -978,8 +986,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        <state relative-caret-position="556">
+          <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="4" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
