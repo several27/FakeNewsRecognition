@@ -7,6 +7,7 @@ import subprocess
 
 import numpy as np
 import pandas as pd
+from gensim.models import FastText
 from gensim.parsing import preprocess_string
 from tqdm import tqdm
 
@@ -17,9 +18,14 @@ path_news_csv = path_data + 'news_cleaned_2018_02_13.csv'
 path_fasttext = path_data + 'news_cleaned_2018_02_13.fasttext.bin'
 path_news_preprocessed = path_data + 'news_cleaned_2018_02_13.preprocessed.jsonl'
 path_news_shuffled = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.jsonl'
+
 path_news_train = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.train.jsonl'
 path_news_test = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.test.jsonl'
 path_news_val = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.val.jsonl'
+
+path_news_train_embedded = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.embedded.train.jsonl'
+path_news_test_embedded = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.embedded.test.jsonl'
+path_news_val_embedded = path_data + 'news_cleaned_2018_02_13.preprocessed.shuffled.embedded.val.jsonl'
 
 
 def _news_generator_process_line(line, fasttext, max_words):
@@ -108,17 +114,29 @@ def prepare_data():
     train_size, test_size, val_size, count_lines = train_test_val_count()
 
     print('Splitting into train, test, and val...')
-    with open(path_news_shuffled, 'r') as in_news:
-        with open(path_news_train, 'w') as out_train:
-            with open(path_news_test, 'w') as out_test:
-                with open(path_news_val, 'w') as out_val:
-                    for i, line in tqdm(enumerate(in_news)):
-                        if i < train_size:
-                            out_train.write(line)
-                        elif i < (train_size + test_size):
-                            out_test.write(line)
-                        else:
-                            out_val.write(line)
+    if not os.path.isfile(path_news_train) or not os.path.isfile(path_news_test) or not os.path.isfile(path_news_val):
+        with open(path_news_shuffled, 'r') as in_news:
+            with open(path_news_train, 'w') as out_train:
+                with open(path_news_test, 'w') as out_test:
+                    with open(path_news_val, 'w') as out_val:
+                        for i, line in tqdm(enumerate(in_news)):
+                            if i < train_size:
+                                out_train.write(line)
+                            elif i < (train_size + test_size):
+                                out_test.write(line)
+                            else:
+                                out_val.write(line)
+
+    print('Loading fasttext...')
+    fasttext = FastText.load_fasttext_format(path_fasttext)
+
+    print('Embedding...')
+    for path, path_embedded in [(path_news_train, path_news_train_embedded),
+                                (path_news_test, path_news_test_embedded),
+                                (path_news_val, path_news_val_embedded)]:
+        with open(path_embedded, 'w') as out_embedded:
+            for embedding, label in embedded_news_generator(path, 1, fasttext):
+                out_embedded.write(ujson.dumps({'embedding': embedding, 'label': label}))
 
 
 if __name__ == '__main__':
