@@ -1,4 +1,5 @@
 import os
+import csv
 import multiprocessing
 
 import ujson
@@ -8,6 +9,8 @@ import numpy as np
 import pandas as pd
 from gensim.parsing import preprocess_string
 from tqdm import tqdm
+
+csv.field_size_limit(500 * 1024 * 1024)
 
 path_data = os.environ['FNR_PATH_DATA'] if 'FNR_PATH_DATA' in os.environ else 'data/fake_news_corpus/'
 path_news_csv = path_data + 'news_cleaned_2018_02_13.csv'

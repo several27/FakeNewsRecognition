@@ -53,6 +53,29 @@ def cnn_deep_model(filters=512, drop=0.5, filter_sizes=(3, 4, 5)):
     return model
 
 
+def cnn_deep_model_2(filters=10, dropout_prob=(0.5, 0.8), filter_sizes=(3, 8), hidden_dims=50):
+    model_input = Input(shape=input_shape)
+    z = Dropout(dropout_prob[0])(model_input)
+
+    conv_blocks = []
+    for sz in filter_sizes:
+        conv = Conv1D(filters=filters, kernel_size=sz, padding='valid', activation='relu', strides=1)(z)
+        conv = MaxPool1D(pool_size=2)(conv)
+        conv = Flatten()(conv)
+        conv_blocks.append(conv)
+
+    z = Concatenate()(conv_blocks) if len(conv_blocks) > 1 else conv_blocks[0]
+
+    z = Dropout(dropout_prob[1])(z)
+    z = Dense(hidden_dims, activation='relu')(z)
+    model_output = Dense(1, activation='sigmoid')(z)
+
+    model = Model(model_input, model_output)
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+    return model
+
+
 def train():
     print('Loading fasttext...')
     fasttext = FastText.load_fasttext_format(path_fasttext)
@@ -71,8 +94,8 @@ def train():
 
     print('Training...')
     with tf.device('/gpu:0'):
-        cnn_model = cnn_deep_model()
-        checkpoint = ModelCheckpoint(path_data + 'cnn_deep_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
+        cnn_model = cnn_deep_model_2()
+        checkpoint = ModelCheckpoint(path_data + 'cnn_deep_2_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
                                      verbose=1, mode='auto')
         cnn_model.fit_generator(embedded_news_generator(path_news_train, batch_size, fasttext, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
