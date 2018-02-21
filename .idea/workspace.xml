@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2018-02-21 - count_unique_articles.py" afterPath="$PROJECT_DIR$/2018-02-21 - count_unique_articles.py" />
-      <change beforePath="$PROJECT_DIR$/machines/cnn_deep.py" afterPath="$PROJECT_DIR$/machines/cnn_deep.py" />
+      <change beforePath="$PROJECT_DIR$/machines/data_generator.py" afterPath="$PROJECT_DIR$/machines/data_generator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="451">
+              <caret line="112" column="27" lean-forward="false" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -75,7 +74,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-02-21 - count_unique_articles.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="subprocess.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/subprocess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018-02-21 - count_unique_articles.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2018-02-21 - count_unique_articles.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
@@ -146,9 +155,9 @@
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/data_full.py" />
         <option value="$PROJECT_DIR$/machines/test.py" />
-        <option value="$PROJECT_DIR$/machines/data_generator.py" />
         <option value="$PROJECT_DIR$/machines/cnn_deep.py" />
         <option value="$PROJECT_DIR$/2018-02-21 - count_unique_articles.py" />
+        <option value="$PROJECT_DIR$/machines/data_generator.py" />
       </list>
     </option>
   </component>
@@ -559,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519228873398</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="path data fix">
+      <created>1519231016841</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1519231016841</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -616,7 +632,8 @@
     <MESSAGE value="CNN deep: small changes" />
     <MESSAGE value="Machines split into data generator" />
     <MESSAGE value="CSV and model fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSV and model fixes" />
+    <MESSAGE value="path data fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="path data fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -651,13 +668,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spider/news_spider/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/2377ab6b/bd0d92c9-3ee9-4f9f-8f9b-34658d40639a/main.fnr_scraped_pages">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -971,22 +981,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2018-02-21 - count_unique_articles.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="112" column="27" lean-forward="false" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

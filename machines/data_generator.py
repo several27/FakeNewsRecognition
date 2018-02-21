@@ -93,14 +93,16 @@ def train_test_val_count():
 
 def prepare_data():
     print('Preprocessing...')
-    with open(path_news_preprocessed, 'w') as out_news_preprocessed:
-        for _id, con, label, missing_words in news_preprocessed_generator():
-            out_news_preprocessed.write(ujson.dumps({
-                'id': _id, 'content': con, 'label': int(label)
-            }) + '\n')
+    if not os.path.isfile(path_news_preprocessed):
+        with open(path_news_preprocessed, 'w') as out_news_preprocessed:
+            for _id, con, label, missing_words in news_preprocessed_generator():
+                out_news_preprocessed.write(ujson.dumps({
+                    'id': _id, 'content': con, 'label': int(label)
+                }) + '\n')
 
     print('Shuffling...')
-    subprocess.call(['shuf', path_news_preprocessed, '>', path_news_shuffled])
+    if not os.path.isfile(path_news_shuffled):
+        subprocess.call(['shuf', path_news_preprocessed, '>', path_news_shuffled])
 
     print('Counting...')
     train_size, test_size, val_size, count_lines = train_test_val_count()
