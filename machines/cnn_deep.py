@@ -97,8 +97,10 @@ def cnn_deep_model(filters=512, drop=0.5, filter_sizes=(3, 4, 5)):
 
 
 def main():
+    print('Loading fasttext...')
     fasttext = FastText.load_fasttext_format(path_fasttext)
 
+    print('Counting input...')
     count_lines = 0
     with open(path_news_shuffled, 'r') as in_news:
         for _ in tqdm(in_news):
@@ -108,6 +110,7 @@ def main():
     test_size = int(count_lines * .8)
     val_size = count_lines - (int(count_lines * 0.8) + int(count_lines * 0.1))
 
+    print('Training...')
     with tf.device('/gpu:0'):
         cnn_model = cnn_deep_model()
         checkpoint = ModelCheckpoint(path_data + 'cnn_deep_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',

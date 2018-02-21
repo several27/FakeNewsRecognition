@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="Deep CNN python script">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/maciej.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/machines/cnn_deep.py" />
+    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/machines/cnn_deep.py" afterPath="$PROJECT_DIR$/machines/cnn_deep.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,8 +67,8 @@
       <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+            <state relative-caret-position="496">
+              <caret line="115" column="42" lean-forward="false" selection-start-line="115" selection-start-column="42" selection-end-line="115" selection-end-column="42" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -604,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517582343701</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Deep CNN python script">
+      <created>1519174713498</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519174713498</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -657,7 +663,8 @@
     <MESSAGE value="Small fixes" />
     <MESSAGE value="Newspaper timing etc" />
     <MESSAGE value="Extract data scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Extract data scripts" />
+    <MESSAGE value="Deep CNN python script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deep CNN python script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,8 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="33" column="15" lean-forward="true" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+        <state relative-caret-position="496">
+          <caret line="115" column="42" lean-forward="false" selection-start-line="115" selection-start-column="42" selection-end-line="115" selection-end-column="42" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
