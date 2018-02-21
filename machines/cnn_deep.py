@@ -108,7 +108,6 @@ def train():
 
 def test():
     print('Loading fasttext...')
-    fasttext = FastText.load_fasttext_format(path_fasttext)
     cnn_model = cnn_deep_model()
     cnn_model.load_weights(path_data + 'cnn_deep_weights.000-0.4900.hdf5')
 

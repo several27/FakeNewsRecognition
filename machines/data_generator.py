@@ -7,7 +7,6 @@ import subprocess
 
 import numpy as np
 import pandas as pd
-from gensim.models import FastText
 from gensim.parsing import preprocess_string
 from tqdm import tqdm
 
@@ -26,9 +25,9 @@ path_news_train = path_news_cleaned + '.preprocessed.shuffled.train.jsonl'
 path_news_test = path_news_cleaned + '.preprocessed.shuffled.test.jsonl'
 path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 
-path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
-path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
-path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
+# path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
+# path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
+# path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
 
 
 def _news_generator_process_line(line, fasttext, max_words):
@@ -60,6 +59,22 @@ def embedded_news_generator(path, batch, fasttext, max_words):
                     batch_embedding[batch_i] = embedding
                     batch_label[batch_i, 0] = label
                     batch_i += 1
+
+
+# def hdf5_embedded_news_generator(path_embedded, batch):
+#     while True:
+#         with h5py.File(path_embedded, 'r') as in_embedded:
+#             embeddings = in_embedded['embeddings']
+#             labels = in_embedded['labels']
+#
+#             pointer = 0
+#             while True:
+#                 pointer_end = pointer + batch
+#                 if embeddings.shape[0] <= pointer_end:
+#                     # TODO: not perfect, misses few last articles :/
+#                     break
+#
+#                 yield embeddings[pointer:pointer_end], labels[pointer:pointer_end]
 
 
 def news_generator():
@@ -130,18 +145,26 @@ def prepare_data():
                             else:
                                 out_val.write(line)
 
-    print('Loading fasttext...')
-    fasttext = FastText.load_fasttext_format(path_fasttext)
-
-    print('Embedding...')
-    max_words = 300
-
-    for path, path_embedded in [(path_news_train, path_news_train_embedded),
-                                (path_news_test, path_news_test_embedded),
-                                (path_news_val, path_news_val_embedded)]:
-        with open(path_embedded, 'w') as out_embedded:
-            for embedding, label in embedded_news_generator(path, 1, fasttext, max_words):
-                out_embedded.write(ujson.dumps({'embedding': embedding, 'label': label}))
+    # print('Loading fasttext...')
+    # fasttext = FastText.load_fasttext_format(path_fasttext)
+    #
+    # print('Embedding...')
+    # max_words = 300
+    # chunk_size = 10 * 1000
+    #
+    # for path, path_embedded, size in [(path_news_train, path_news_train_embedded, train_size),
+    #                                   (path_news_test, path_news_test_embedded, test_size),
+    #                                   (path_news_val, path_news_val_embedded, val_size)]:
+    #     with h5py.File(path_news_train_embedded, 'w') as out_embedded:
+    #         dset_embedding = out_embedded.create_dataset('embeddings', (size, max_words, 100),
+    #                                                      chunks=(chunk_size, max_words, 100), compression='gzip')
+    #         dset_label = out_embedded.create_dataset('labels', (size, 1), chunks=(chunk_size, 1), compression='gzip')
+    #
+    #         pointer = 0
+    #         for embedding, label in embedded_news_generator(path, chunk_size, fasttext, max_words):
+    #             dset_embedding[pointer:(pointer + chunk_size), :, :] = embedding
+    #             dset_label[pointer:(pointer + chunk_size), :] = label
+    #             pointer += chunk_size
 
 
 if __name__ == '__main__':
