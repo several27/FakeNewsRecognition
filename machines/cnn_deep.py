@@ -9,7 +9,7 @@ from keras.optimizers import Adam
 from tqdm import tqdm
 
 from machines.data_generator import embedded_news_generator, path_data, path_news_train, path_news_val, path_fasttext, \
-    path_news_shuffled, embedded_db_news_generator
+    path_news_shuffled
 
 """
 From "2018-02-17 - FakeNewsCorpus Simple CNN.ipynb" notebook
@@ -80,6 +80,14 @@ def cnn_deep_model_2(filters=10, dropout_prob=(0.5, 0.8), filter_sizes=(3, 8), h
 
 
 def train():
+    print('Loading fasttext...')
+    fasttext = FastText.load_fasttext_format(path_fasttext)
+    fasttext_dict = {}
+    for word in tqdm(fasttext.wv.vocab):
+        fasttext_dict[word] = fasttext[word]
+
+    del fasttext
+
     print('Counting input...')
     count_lines = 0
     with open(path_news_shuffled, 'r') as in_news:
@@ -97,9 +105,10 @@ def train():
         cnn_model = cnn_deep_model_2()
         checkpoint = ModelCheckpoint(path_data + 'cnn_deep_2_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
                                      verbose=1, mode='auto')
-        cnn_model.fit_generator(embedded_db_news_generator(path_news_train, batch_size, max_words),
+        cnn_model.fit_generator(embedded_news_generator(path_news_train, batch_size, fasttext_dict, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
-                                validation_data=embedded_db_news_generator(path_news_val, batch_size, max_words),
+                                validation_data=embedded_news_generator(path_news_val, batch_size, fasttext_dict,
+                                                                        max_words),
                                 validation_steps=val_size // batch_size, callbacks=[checkpoint])
 
 
