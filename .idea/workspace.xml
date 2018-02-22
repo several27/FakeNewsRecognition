@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/2018-02-22 - fasttext_to_sql_embedding.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/machines/cnn_deep.py" afterPath="$PROJECT_DIR$/machines/cnn_deep.py" />
-      <change beforePath="$PROJECT_DIR$/machines/data_generator.py" afterPath="$PROJECT_DIR$/machines/data_generator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="90" column="54" lean-forward="false" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+            <state relative-caret-position="378">
+              <caret line="102" column="50" lean-forward="true" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -57,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="81" column="4" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state relative-caret-position="337">
+              <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -627,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519259806957</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fasttext -&gt; db">
+      <created>1519296627598</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1519296627598</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -692,7 +695,8 @@
     <MESSAGE value="Failed hdf5 trial" />
     <MESSAGE value="Possible batch construct improvement" />
     <MESSAGE value="Small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
+    <MESSAGE value="fasttext -&gt; db" />
+    <option name="LAST_COMMIT_MESSAGE" value="fasttext -&gt; db" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1062,22 +1066,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
+    <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="81" column="4" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="378">
+          <caret line="102" column="50" lean-forward="true" selection-start-line="102" selection-start-column="50" selection-end-line="102" selection-end-column="50" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
+    <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="90" column="54" lean-forward="false" selection-start-line="90" selection-start-column="54" selection-end-line="90" selection-end-column="54" />
+        <state relative-caret-position="337">
+          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
