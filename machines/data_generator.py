@@ -89,7 +89,7 @@ def embedded_db_news_generator(path, batch, max_words):
             batch_label = np.zeros((batch, 1))
             batch_embedding = np.zeros((batch, max_words, 100))
             with multiprocessing.Pool(multiprocessing.cpu_count(), maxtasksperchild=1) as pool:
-                for embedding, label in pool.imap(_news_generator_db_process_line, in_news):
+                for embedding, label in pool.imap(_news_generator_db_process_line, in_news, chunksize=10):
                     if (batch_i + 1) == batch:
                         yield batch_embedding, batch_label
                         batch_embedding = np.zeros((batch, max_words, 100))

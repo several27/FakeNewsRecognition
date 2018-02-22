@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/machines/cnn_deep.py" afterPath="$PROJECT_DIR$/machines/cnn_deep.py" />
       <change beforePath="$PROJECT_DIR$/machines/data_generator.py" afterPath="$PROJECT_DIR$/machines/data_generator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +41,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="101" column="55" lean-forward="false" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
+            <state relative-caret-position="333">
+              <caret line="99" column="52" lean-forward="false" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="81" column="4" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state relative-caret-position="401">
+              <caret line="90" column="65" lean-forward="false" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -91,8 +90,8 @@
       <file leaf-file-name="embedding.py" pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/embeddings/embedding.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="153" column="8" lean-forward="false" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+            <state relative-caret-position="386">
+              <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
               <folding>
                 <marker date="1519292905373" expanded="true" signature="2835:2905" ph="create table... embeddings" />
                 <marker date="1519292905373" expanded="true" signature="3128:3159" ph="select count... embeddings" />
@@ -165,8 +164,8 @@
         <option value="$PROJECT_DIR$/machines/test.py" />
         <option value="$PROJECT_DIR$/2018-02-21 - count_unique_articles.py" />
         <option value="$PROJECT_DIR$/2018-02-22 - fasttext_to_sql_embedding.py" />
-        <option value="$PROJECT_DIR$/machines/data_generator.py" />
         <option value="$PROJECT_DIR$/machines/cnn_deep.py" />
+        <option value="$PROJECT_DIR$/machines/data_generator.py" />
       </list>
     </option>
   </component>
@@ -648,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519297756164</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Or maybe dB?">
+      <created>1519298029512</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1519298029512</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -690,7 +696,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Project Brief - README" />
     <MESSAGE value="News Spider" />
     <MESSAGE value="Path fix" />
     <MESSAGE value="Update batch" />
@@ -715,7 +720,8 @@
     <MESSAGE value="Small fix" />
     <MESSAGE value="fasttext -&gt; db" />
     <MESSAGE value="Reverse the db change" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reverse the db change" />
+    <MESSAGE value="Or maybe dB?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Or maybe dB?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -750,13 +756,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/PIL/TiffImagePlugin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="698" column="48" lean-forward="false" selection-start-line="698" selection-start-column="35" selection-end-line="698" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/newspaper/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-195">
@@ -1054,10 +1053,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="99" column="52" lean-forward="false" selection-start-line="99" selection-start-column="52" selection-end-line="99" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../../Caches/PyCharm2017.3/python_stubs/776880377/_sqlite3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/embeddings/embedding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="153" column="8" lean-forward="false" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+        <state relative-caret-position="386">
+          <caret line="86" column="25" lean-forward="true" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
           <folding>
             <marker date="1519292905373" expanded="true" signature="2835:2905" ph="create table... embeddings" />
             <marker date="1519292905373" expanded="true" signature="3128:3159" ph="select count... embeddings" />
@@ -1088,20 +1105,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="81" column="4" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="401">
+          <caret line="90" column="65" lean-forward="false" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="101" column="55" lean-forward="false" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
