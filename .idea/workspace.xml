@@ -44,8 +44,8 @@
       <file leaf-file-name="cnn_deep.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+            <state relative-caret-position="436">
+              <caret line="102" column="9" lean-forward="false" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -56,8 +56,8 @@
       <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="321">
+              <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -68,7 +68,7 @@
       <file leaf-file-name="numeric.py" pinned="false" current-in-tab="false">
         <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/numpy/core/numeric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="43">
               <caret line="423" column="4" lean-forward="false" selection-start-line="423" selection-start-column="4" selection-end-line="423" selection-end-column="4" />
               <folding />
             </state>
@@ -596,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519254539654</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Small fix">
+      <created>1519255565385</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1519255565385</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -660,7 +667,8 @@
     <MESSAGE value="Small max_words fix" />
     <MESSAGE value="Failed hdf5 trial" />
     <MESSAGE value="Possible batch construct improvement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Possible batch construct improvement" />
+    <MESSAGE value="Small fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -695,13 +703,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tagger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/timeit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1012,10 +1013,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="1688" column="8" lean-forward="false" selection-start-line="1688" selection-start-column="8" selection-end-line="1688" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/machines/cnn_deep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="88" column="31" lean-forward="true" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+        <state relative-caret-position="436">
+          <caret line="102" column="9" lean-forward="false" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -1024,7 +1033,7 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/numpy/core/numeric.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="43">
           <caret line="423" column="4" lean-forward="false" selection-start-line="423" selection-start-column="4" selection-end-line="423" selection-end-column="4" />
           <folding />
         </state>
@@ -1032,8 +1041,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="321">
+          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>

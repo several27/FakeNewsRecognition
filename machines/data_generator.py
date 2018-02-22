@@ -25,7 +25,6 @@ path_news_train = path_news_cleaned + '.preprocessed.shuffled.train.jsonl'
 path_news_test = path_news_cleaned + '.preprocessed.shuffled.test.jsonl'
 path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 
-
 # path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
 # path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
 # path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
@@ -34,33 +33,31 @@ path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 def _news_generator_process_line(line, fasttext, max_words):
     article = ujson.loads(line)
 
-    embedding = []
+    embedding = np.zeros((max_words, 100))
     for i, word in enumerate(article['content'][:max_words]):
         if word in fasttext:
-            embedding.append(fasttext[word])
+            embedding[i] = fasttext[word]
 
-    return np.asarray(embedding), article['label']
+    return embedding, article['label']
 
 
 def embedded_news_generator(path, batch, fasttext, max_words):
     while True:
         with open(path, 'r') as in_news:
             batch_i = 0
-            batch_label = []
-            batch_embedding = []
+            batch_embedding = np.zeros((batch, max_words, 100))
+            batch_label = np.zeros((batch, 1))
             for line in in_news:
                 embedding, label = _news_generator_process_line(line, fasttext, max_words)
 
-                batch_label.append(label)
-                batch_embedding.append(embedding)
-
                 if (batch_i + 1) == batch:
-                    yield np.asarray(batch_embedding), np.asarray(batch_label)
-
+                    yield batch_embedding, batch_label
+                    batch_embedding = np.zeros((batch, max_words, 100))
+                    batch_label = np.zeros((batch, 1))
                     batch_i = 0
-                    batch_label = []
-                    batch_embedding = []
                 else:
+                    batch_embedding[batch_i] = embedding
+                    batch_label[batch_i, 0] = label
                     batch_i += 1
 
 
