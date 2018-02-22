@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ubuntu@ec2-35-178-71-42.eu-west-2.compute.amazonaws.com">
+    <serverData>
+      <paths name="ubuntu@ec2-35-178-71-42.eu-west-2.compute.amazonaws.com">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ubuntu/Developer/FakeNewsRecognition/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
     <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

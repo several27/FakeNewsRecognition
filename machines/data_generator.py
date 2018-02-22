@@ -7,6 +7,7 @@ import subprocess
 
 import numpy as np
 import pandas as pd
+from embeddings.embedding import Embedding
 from gensim.parsing import preprocess_string
 from tqdm import tqdm
 
@@ -18,12 +19,14 @@ path_news_cleaned = path_data + news_cleaned_version
 
 path_news_csv = path_news_cleaned + '.csv'
 path_fasttext = path_news_cleaned + '.fasttext.bin'
+path_fasttext_db = path_news_cleaned + '.fasttext.db'
 path_news_preprocessed = path_news_cleaned + '.preprocessed.jsonl'
 path_news_shuffled = path_news_cleaned + '.preprocessed.shuffled.jsonl'
 
 path_news_train = path_news_cleaned + '.preprocessed.shuffled.train.jsonl'
 path_news_test = path_news_cleaned + '.preprocessed.shuffled.test.jsonl'
 path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
+
 
 # path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
 # path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
@@ -59,6 +62,43 @@ def embedded_news_generator(path, batch, fasttext, max_words):
                     batch_embedding[batch_i] = embedding
                     batch_label[batch_i, 0] = label
                     batch_i += 1
+
+
+def _news_generator_db_process_line(line, max_words=300):
+    e = Embedding()
+    e.db = e.initialize_db(path_fasttext_db)
+
+    article = ujson.loads(line)
+
+    embedding = np.zeros((max_words, 100))
+    for i, word in enumerate(article['content'][:max_words]):
+        emb = e.lookup(word)
+        if emb is not None:
+            embedding[i] = emb
+
+    return embedding, article['label']
+
+
+def embedded_db_news_generator(path, batch, max_words):
+    e = Embedding()
+    e.db = e.initialize_db(path_fasttext_db)
+
+    while True:
+        with open(path, 'r') as in_news:
+            batch_i = 0
+            batch_label = np.zeros((batch, 1))
+            batch_embedding = np.zeros((batch, max_words, 100))
+            with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
+                for embedding, label in pool.imap(_news_generator_db_process_line, in_news, chunksize=100):
+                    if (batch_i + 1) == batch:
+                        yield batch_embedding, batch_label
+                        batch_embedding = np.zeros((batch, max_words, 100))
+                        batch_label = np.zeros((batch, 1))
+                        batch_i = 0
+                    else:
+                        batch_embedding[batch_i] = embedding
+                        batch_label[batch_i, 0] = label
+                        batch_i += 1
 
 
 # def hdf5_embedded_news_generator(path_embedded, batch):
