@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="3dd36fb7-b45b-45d4-8119-d160ceab4f0c" name="ubuntu@ec2-35-178-71-42.eu-west-2.compute.amazonaws.com" url="http://ubuntu@ec2-35-178-71-42.eu-west-2.compute.amazonaws.com">
-        <fileTransfer host="ubuntu@ec2-35-178-71-42.eu-west-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/Documents/Developer/FuseMind/researchably-main.pem" accessType="SFTP" keyPair="true">
+      <webServer id="aab10222-95f1-4a07-9041-9b76f9e1eabe" name="ms3u14@myrtle.ecs.soton.ac.uk" url="http://myrtle.ecs.soton.ac.uk">
+        <fileTransfer host="myrtle.ecs.soton.ac.uk" port="22" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

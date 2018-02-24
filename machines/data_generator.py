@@ -8,6 +8,7 @@ import subprocess
 import numpy as np
 import pandas as pd
 from embeddings.embedding import Embedding
+from gensim.models import FastText
 from gensim.parsing import preprocess_string
 from tqdm import tqdm
 
@@ -31,6 +32,17 @@ path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 # path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
 # path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
 # path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
+
+
+def load_fasttext():
+    _fasttext = FastText.load_fasttext_format(path_fasttext)
+    fasttext_dict = {}
+    for word in tqdm(_fasttext.wv.vocab):
+        fasttext_dict[word] = _fasttext[word]
+
+    del _fasttext
+
+    return fasttext_dict
 
 
 def _news_generator_process_line(line, fasttext, max_words):

@@ -9,7 +9,7 @@ from keras.optimizers import Adam
 from tqdm import tqdm
 
 from machines.data_generator import embedded_news_generator, path_data, path_news_train, path_news_val, path_fasttext, \
-    path_news_shuffled
+    path_news_shuffled, load_fasttext
 
 """
 From "2018-02-17 - FakeNewsCorpus Simple CNN.ipynb" notebook
@@ -23,7 +23,7 @@ max_words = 300
 input_shape = max_words, 100
 
 batch_size = 64
-epochs = 5
+epochs = 10
 
 
 def cnn_deep_model(filters=512, drop=0.5, filter_sizes=(3, 4, 5)):
@@ -81,12 +81,7 @@ def cnn_deep_model_2(filters=10, dropout_prob=(0.5, 0.8), filter_sizes=(3, 8), h
 
 def train():
     print('Loading fasttext...')
-    fasttext = FastText.load_fasttext_format(path_fasttext)
-    fasttext_dict = {}
-    for word in tqdm(fasttext.wv.vocab):
-        fasttext_dict[word] = fasttext[word]
-
-    del fasttext
+    fasttext_dict = load_fasttext()
 
     print('Counting input...')
     count_lines = 0
@@ -102,8 +97,9 @@ def train():
 
     print('Training...')
     with tf.device('/gpu:0'):
-        cnn_model = cnn_deep_model_2()
-        checkpoint = ModelCheckpoint(path_data + 'cnn_deep_2_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
+        cnn_model = cnn_deep_model_2(filter_sizes=(2, 3, 4), hidden_dims=5, filters=128, dropout_prob=(0.8, 0))
+        checkpoint = ModelCheckpoint(path_data + 'cnn_deep_2_filter_sizes_2_3_4_hidden_5_filters_128_dropout_prob_08_0'
+                                                 '_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
                                      verbose=1, mode='auto')
         cnn_model.fit_generator(embedded_news_generator(path_news_train, batch_size, fasttext_dict, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
@@ -114,8 +110,10 @@ def train():
 
 def test():
     print('Loading fasttext...')
-    cnn_model = cnn_deep_model()
-    cnn_model.load_weights(path_data + 'cnn_deep_weights.000-0.4900.hdf5')
+
+    cnn_model = cnn_deep_model_2(filter_sizes=(2, 3, 4), hidden_dims=5, filters=128, dropout_prob=(0.8, 0))
+    wights = 'cnn_deep_2_filter_sizes_2_3_4_hidden_5_filters_128_dropout_prob_08_0_weights.010-0.9288.hdf5'
+    cnn_model.load_weights(path_data + wights)
 
 
 if __name__ == '__main__':
