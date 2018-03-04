@@ -28,6 +28,8 @@ path_news_train = path_news_cleaned + '.preprocessed.shuffled.train.jsonl'
 path_news_test = path_news_cleaned + '.preprocessed.shuffled.test.jsonl'
 path_news_val = path_news_cleaned + '.preprocessed.shuffled.val.jsonl'
 
+path_news_preprocessed_all = path_news_cleaned + '_all.preprocessed.jsonl'
+
 
 # path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
 # path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
@@ -129,15 +131,23 @@ def embedded_db_news_generator(path, batch, max_words):
 #                 yield embeddings[pointer:pointer_end], labels[pointer:pointer_end]
 
 
-def news_generator():
+def news_generator(binary=True):
     with tqdm() as progress:
         for df_news_chunk in pd.read_csv(path_news_csv, encoding='utf-8', engine='python', chunksize=10 * 1000):
-            news_filter = df_news_chunk.type.isin({'fake', 'conspiracy', 'unreliable', 'reliable'})
-            df_news_chunk_filtered = df_news_chunk[news_filter]
-            for row in df_news_chunk_filtered.itertuples():
-                label = 1 if row.type == 'reliable' else 0
+            if binary:
+                news_filter = df_news_chunk.type.isin({'fake', 'conspiracy', 'unreliable', 'reliable'})
+                df_news_chunk = df_news_chunk[news_filter]
+
+            for row in df_news_chunk.itertuples():
+                if binary:
+                    label = 1 if row.type == 'reliable' else 0
+                else:
+                    label = row.type
 
                 progress.update()
+                if not isinstance(label, str):
+                    continue
+
                 yield int(row.id), '%s %s' % (row.title, row.content), label
 
 
@@ -146,12 +156,29 @@ def _preprocess_string(news):
     return _id, preprocess_string(con), label
 
 
-def news_preprocessed_generator():
+def news_preprocessed_generator(binary=True, duplicates=True):
     missing_words = {}
 
+    counter = {'content_skipped': []}
+    unique_hashes = {'content': set()}
+
     with multiprocessing.Pool(multiprocessing.cpu_count(), maxtasksperchild=1) as pool:
-        for _id, con, label in pool.imap(_preprocess_string, news_generator(), chunksize=1000):
+        for _id, con, label in pool.imap(_preprocess_string, news_generator(binary), chunksize=1000):
+            if not duplicates:
+                if not isinstance(con, str):
+                    continue
+
+                content_hash = con.__hash__()
+
+                if content_hash in unique_hashes['content']:
+                    counter['content_skipped'].append(_id)
+                    continue
+
+                unique_hashes['content'].add(content_hash)
+
             yield _id, con, label, missing_words
+
+    print('Skipeed', len(counter['content_skipped']))
 
 
 def train_test_val_count():
@@ -219,5 +246,17 @@ def prepare_data():
     #             pointer += chunk_size
 
 
+def prepare_all_data():
+    print('Preprocessing...')
+    if not os.path.isfile(path_news_preprocessed_all):
+        with open(path_news_preprocessed_all, 'w') as out_news_preprocessed:
+            for _id, con, label, missing_words in news_preprocessed_generator(binary=False, duplicates=False):
+                out_news_preprocessed.write(ujson.dumps({
+                    'id': _id, 'content': con, 'label': label
+                }) + '\n')
+    else:
+        print('Data already prepared! 😊')
+
+
 if __name__ == '__main__':
-    prepare_data()
+    prepare_all_data()

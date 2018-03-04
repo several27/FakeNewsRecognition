@@ -38,10 +38,10 @@ def main():
     path_data = '/Volumes/ExternalSSD/FakeNewsRecognition/'
     logging.basicConfig(filename=path_data + 'data_full.log', level=logging.DEBUG)
 
-    peewee_database_merged = peewee.SqliteDatabase(path_data + 'news_cleaned_2018_01_29+postgres+nytimes+webhose.db')
+    peewee_database_merged = peewee.SqliteDatabase(path_data + 'news_cleaned_2018_03_03.db')
     Page._meta.database = peewee_database_merged
 
-    with open(path_data + 'news_cleaned_2018_01_29+postgres+nytimes+webhose.csv', 'a') as out_news:
+    with open(path_data + 'news_cleaned_2018_03_03.csv', 'a', encoding='utf-8') as out_news:
         df_pages = pd.DataFrame([], columns=csv_columns)
         df_pages.to_csv(out_news, header=True)
 
