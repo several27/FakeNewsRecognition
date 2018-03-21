@@ -68,6 +68,11 @@ def main():
                 continue
 
             unique_hashes['content'].add(content_hash)
+
+            page_dict = model_to_dict(page)
+            if page_dict['source'] is None:
+                page_dict['source'] = 'opensouces'
+
             batch.append(model_to_dict(page))
 
             if len(batch) > 50:
