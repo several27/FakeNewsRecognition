@@ -1,63 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="scraper.db" uuid="cceac2aa-1736-4ebd-bf26-ef92ff9416cc">
+    <data-source name="news_cleaned_2018_03_26.db" uuid="5513ea05-d621-4edd-a982-6d0370cf0b0c">
       <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
-      <introspection-schemas>*:main</introspection-schemas>
+      <introspection-schemas>*:*</introspection-schemas>
     </data-source>
-    <data-source name="news_spider.db" uuid="bd0d92c9-3ee9-4f9f-8f9b-34658d40639a">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:main</introspection-schemas>
-    </data-source>
-    <data-source name="news_cleaned.db" uuid="c1fc3979-c2fe-4624-9a58-d9ff62fa7fd0">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:main</introspection-schemas>
-    </data-source>
-    <data-source name="news_cleaned_2018_01_29.db" uuid="0bea0869-4975-47f4-b1a0-c6fef4a25976">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:main</introspection-schemas>
-    </data-source>
-    <data-source name="news_cleaned_postgres.sqlite" uuid="3e4d3676-518d-48cc-a94c-bb70b39ce216">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>:</introspection-schemas>
-    </data-source>
-    <data-source name="webhose.sqlite" uuid="c33db1be-358d-464e-a284-b3289fc7d549">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>*:main</introspection-schemas>
-    </data-source>
-    <data-source name="news_cleaned_2018_01_29+postgres.db" uuid="8732b194-f5cf-419f-9b1b-066efe6fec3c">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>:</introspection-schemas>
-    </data-source>
-    <data-source name="news_cleaned_2018_01_29+postgres+nytimes+webhose.db" uuid="5e3b567b-e713-4b65-9eb4-f2de17bd8c41">
-      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <auth-required>false</auth-required>
-      <introspection-schemas>:</introspection-schemas>
-    </data-source>
-    <data-source name="fasttext.db" uuid="151955b9-83f8-455a-b1d1-afb2e3b67103">
+    <data-source name="news_cleaned_2018_02_13.db" uuid="30d5f634-4bf2-49fc-afd1-5317b80ab9d6">
       <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>

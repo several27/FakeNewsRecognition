@@ -1,3 +1,5 @@
+from typing import Union, List
+
 import tensorflow as tf
 from gensim.models.fasttext import FastText
 from keras.callbacks import ModelCheckpoint
@@ -11,15 +13,18 @@ from machines.data_generator import embedded_news_generator_all, path_data, path
 max_words = 300
 input_shape = max_words, 100
 
-batch_size = 64
+batch_size = 256
 epochs = 10
 
 
-def bilstm_model(units=64, dropout=(0.5,), hidden_dims=17):
+def bilstm_model(units: Union[List[int], int] = 64, dropout=(0.5,), hidden_dims=17):
     model_input = Input(shape=input_shape)
-    bilstm = Bidirectional(LSTM(units))(model_input)
 
-    z = Dropout(dropout[0])(bilstm)
+    previous_layer = model_input
+    for u in ([units] if not isinstance(units, list) else units):
+        previous_layer = Bidirectional(LSTM(u))(model_input)
+
+    z = Dropout(dropout[0])(previous_layer)
     z = Dense(hidden_dims, activation='relu')(z)
     model_output = Dense(len(news_labels), activation='sigmoid')(z)
 
@@ -52,19 +57,19 @@ def train():
 
     print('Training...')
     with tf.device('/gpu:0'):
-        cnn_model = bilstm_model()
-        checkpoint = ModelCheckpoint(path_data + 'bilstm_all_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
-                                     verbose=1, mode='auto')
+        cnn_model = bilstm_model(units=[128, 64, 32], hidden_dims=18)
+        checkpoint = ModelCheckpoint(path_data + 'bilstm_all_1_weights.{epoch:03d}-{val_acc:.4f}.hdf5',
+                                     monitor='val_acc', verbose=1, mode='auto')
         cnn_model.fit_generator(embedded_news_generator_all(path_news_train_all, batch_size, fasttext_dict, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
-                                validation_data=embedded_news_generator_all(path_news_val_all, batch_size, 
+                                validation_data=embedded_news_generator_all(path_news_val_all, batch_size,
                                                                             fasttext_dict, max_words),
                                 validation_steps=val_size // batch_size, callbacks=[checkpoint])
 
 
 def test():
     print('Loading fasttext...')
-    cnn_model = cnn_deep_model()
+    cnn_model = bilstm_model()
     cnn_model.load_weights(path_data + 'cnn_deep_weights.000-0.4900.hdf5')
 
 

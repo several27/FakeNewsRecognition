@@ -79,15 +79,15 @@ def train():
             count_lines += 1
 
     train_size = int(count_lines * .8)
-    test_size = int(count_lines * .8)
-    val_size = count_lines - (int(count_lines * 0.8) + int(count_lines * 0.1))
+    test_size = int(count_lines * .1)
+    val_size = count_lines - (train_size + test_size)
 
     print('Train size:', train_size, '; test size:', test_size, '; val size:', val_size)
 
     with tf.device('/gpu:0'):
-        model = tsn_model(num_channels=[1000] * 4 + [100])
+        model = tsn_model(num_channels=[1000] * 6 + [100])
         model.summary()
-        checkpoint = ModelCheckpoint(path_data + 'tsn_weights_word_cnn.{epoch:03d}-{val_acc:.4f}.hdf5',
+        checkpoint = ModelCheckpoint(path_data + 'tsn_weights_1000_6_100.{epoch:03d}-{val_acc:.4f}.hdf5',
                                      monitor='val_acc', verbose=1, mode='auto')
 
         print('Loading fasttext...')

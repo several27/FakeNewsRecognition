@@ -17,9 +17,12 @@ epochs = 10
 
 def bilstm_model(units=64, dropout=(0.5,), hidden_dims=17):
     model_input = Input(shape=input_shape)
-    bilstm = Bidirectional(LSTM(units))(model_input)
 
-    z = Dropout(dropout[0])(bilstm)
+    previous_layer = model_input
+    for u in ([units] if not isinstance(units, list) else units):
+        previous_layer = Bidirectional(LSTM(u))(model_input)
+
+    z = Dropout(dropout[0])(previous_layer)
     z = Dense(hidden_dims, activation='relu')(z)
     model_output = Dense(1, activation='sigmoid')(z)
 
@@ -53,7 +56,7 @@ def train():
     print('Training...')
     with tf.device('/gpu:0'):
         cnn_model = bilstm_model()
-        checkpoint = ModelCheckpoint(path_data + 'bilstm_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
+        checkpoint = ModelCheckpoint(path_data + 'bilstm_2_weights.{epoch:03d}-{val_acc:.4f}.hdf5', monitor='val_acc',
                                      verbose=1, mode='auto')
         cnn_model.fit_generator(embedded_news_generator(path_news_train, batch_size, fasttext_dict, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,

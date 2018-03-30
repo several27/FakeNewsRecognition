@@ -1,92 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="scraper.db" uuid="cceac2aa-1736-4ebd-bf26-ef92ff9416cc">
+    <data-source source="LOCAL" name="news_cleaned_2018_03_26.db" uuid="5513ea05-d621-4edd-a982-6d0370cf0b0c">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/7_fake_news/scraper.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_2018_03_26.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="news_spider.db" uuid="bd0d92c9-3ee9-4f9f-8f9b-34658d40639a">
+    <data-source source="LOCAL" name="news_cleaned_2018_02_13.db" uuid="30d5f634-4bf2-49fc-afd1-5317b80ab9d6">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_spider.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="news_cleaned.db" uuid="c1fc3979-c2fe-4624-9a58-d9ff62fa7fd0">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/7_opensources_co/news_cleaned.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="news_cleaned_2018_01_29.db" uuid="0bea0869-4975-47f4-b1a0-c6fef4a25976">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/7_opensources_co/news_cleaned_2018_01_29.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="news_cleaned_postgres.sqlite" uuid="3e4d3676-518d-48cc-a94c-bb70b39ce216">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_postgres.db</jdbc-url>
-      <explain-plan-config>
-        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
-      </explain-plan-config>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="webhose.sqlite" uuid="c33db1be-358d-464e-a284-b3289fc7d549">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/webhose/news_cleaned_webhose.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="news_cleaned_2018_01_29+postgres.db" uuid="8732b194-f5cf-419f-9b1b-066efe6fec3c">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_2018_01_29+postgres.db</jdbc-url>
-      <explain-plan-config>
-        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
-      </explain-plan-config>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="news_cleaned_2018_01_29+postgres+nytimes+webhose.db" uuid="5e3b567b-e713-4b65-9eb4-f2de17bd8c41">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_2018_01_29+postgres+nytimes+webhose.db</jdbc-url>
-      <explain-plan-config>
-        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
-      </explain-plan-config>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="fasttext.db" uuid="151955b9-83f8-455a-b1d1-afb2e3b67103">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/data/fake_news_corpus/fasttext.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:/Volumes/ExternalSSD/FakeNewsRecognition/news_cleaned_2018_02_13.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

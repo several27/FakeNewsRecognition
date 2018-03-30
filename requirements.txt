@@ -1,0 +1,5 @@
+peewee
+newspaper3k
+ujson
+pandas
+tqdm

@@ -9,7 +9,7 @@ import pandas as pd
 from tqdm import tqdm
 import newspaper
 
-from database import Page, ScrapedPage, peewee_database
+from .database import Page, ScrapedPage, peewee_database
 
 
 def parse_article(scraped_page: ScrapedPage):

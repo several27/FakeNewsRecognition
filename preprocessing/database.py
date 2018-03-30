@@ -3,18 +3,15 @@ from typing import Set
 
 from peewee import Model, DateTimeField, CharField, TextField, IntegerField, SqliteDatabase
 
-raw_peewee_database = SqliteDatabase('data/7_opensources_co/news_spider_2018_01_29.db')
-peewee_database = SqliteDatabase('data/7_opensources_co/news_cleaned_postgres.db')
-
 
 class RawBaseModel(Model):
     class Meta:
-        database = raw_peewee_database
+        database = None
 
 
 class BaseModel(Model):
     class Meta:
-        database = peewee_database
+        database = None
 
 
 class ScrapedPage(RawBaseModel):
@@ -86,7 +83,5 @@ class Page(BaseModel):
     _cache_urls = None  # type: Set[str]
 
     class Meta:
-        db_table = 'fnr_pages'
+        db_table = 'news_cleaned'
 
-
-peewee_database.create_tables([Page], safe=True)

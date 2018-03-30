@@ -86,7 +86,7 @@ def train():
     print('Train size:', train_size, '; test size:', test_size, '; val size:', val_size)
 
     with tf.device('/gpu:0'):
-        model = tsn_model(num_channels=np.arange(50, 1, -5))
+        model = tsn_model(num_channels=[1000] * 4 + [100])
         model.summary()
         checkpoint = ModelCheckpoint(path_data + 'tsn_weights_word_cnn_all.{epoch:03d}-{val_acc:.4f}.hdf5',
                                      monitor='val_acc', verbose=1, mode='auto')

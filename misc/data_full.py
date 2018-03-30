@@ -6,7 +6,7 @@ import peewee
 from playhouse.shortcuts import model_to_dict
 from tqdm import tqdm
 
-from database import Page
+from .database import Page
 
 
 def fetch_pages(last_id, batch_size):
