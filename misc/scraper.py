@@ -15,7 +15,8 @@ from tqdm import tqdm
 from lxml.html import tostring
 from lxml.html import fromstring
 from lxml.cssselect import CSSSelector
-from dotenv import load_dotenv, find_dotenv
+from dotenv import \
+    load_dotenv, find_dotenv
 
 
 class Parser:

@@ -52,7 +52,7 @@ def TemporalBlock(input_, n_outputs, kernel_size, stride, dilation, padding, dro
     return relu_10
 
 
-def tsn_model(num_channels, kernel_size=2, dropout=0.2):
+def tcn_model(num_channels, kernel_size=2, dropout=0.2):
     model_input = Input(shape=input_shape)
 
     previous_layer = model_input
@@ -85,9 +85,9 @@ def train():
     print('Train size:', train_size, '; test size:', test_size, '; val size:', val_size)
 
     with tf.device('/gpu:0'):
-        model = tsn_model(num_channels=[1000] * 6 + [100])
+        model = tcn_model(num_channels=[1000, 1000, 800, 800, 600, 600, 400, 200, 200, 100, 100, 50, 50])
         model.summary()
-        checkpoint = ModelCheckpoint(path_data + 'tsn_weights_1000_6_100.{epoch:03d}-{val_acc:.4f}.hdf5',
+        checkpoint = ModelCheckpoint(path_data + 'tsn_weights_1000_to_50.{epoch:03d}-{val_acc:.4f}.hdf5',
                                      monitor='val_acc', verbose=1, mode='auto')
 
         print('Loading fasttext...')
@@ -109,7 +109,7 @@ def train():
 
 def test():
     print('Loading fasttext...')
-    cnn_model = tsn_model()
+    cnn_model = tcn_model()
     cnn_model.load_weights(path_data + 'cnn_deep_weights.000-0.4900.hdf5')
 
 

@@ -26,6 +26,7 @@ Finally, the term “fake news” sometimes is associated with political views s
 1. Run the scraper. From inside of the spider directory run:  
 
     ```bash
+    export PATH_FNR=/home/several27/FakeNewsRecognition/
     scrapy crawl news -s LOG_FILE="../data/7_opensources_co/news_spider.log.1" -s JOBDIR="../data/7_opensources_co/news_spider_job_1/"
     ```
 

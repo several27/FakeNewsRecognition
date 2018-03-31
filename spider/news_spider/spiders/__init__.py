@@ -11,7 +11,7 @@ from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 path_fnr = os.environ['PATH_FNR']
 path_7_fn = path_fnr + 'data/7_opensources_co/'
-path_websites = path_7_fn + 'websites_with_results.xlsx'
+path_websites = path_7_fn + 'websites_missing_2018_02_13.xlsx'
 path_logger = path_7_fn + 'news_spider.log'
 
 

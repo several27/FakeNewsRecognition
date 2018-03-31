@@ -4,11 +4,12 @@ RUN apt-get update -y && apt-get install -y tmux nginx python3 python3-pip pytho
                        postgresql-contrib-9.5 libssl-dev build-essential gfortran libatlas-base-dev liblapacke-dev redis-server
 RUN pip3 install flask uwsgi uwsgitop psycopg2 ujson Pyro4 flask_sslify peewee flask_mail applicationinsights \
                  voluptuous requests tweepy newspaper3k PyJWT Flask-Environ python-jose flask-cors iso8601 tqdm \
-                 flask-socketio gevent gevent-websocket sklearn numpy Cython scipy gensim
+                 flask-socketio gevent gevent-websocket sklearn numpy Cython scipy gensim keras tensorflow
 
 # requires above libraries to be already installed :/
 RUN pip3 install libact
 RUN pip3 install elasticsearch xmltodict boto3 celery redis
+RUN pip3 install h5py
 
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone

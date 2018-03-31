@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ms3u14@myrtle.ecs.soton.ac.uk">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ec2-35-177-189-207.eu-west-2.compute.amazonaws.com">
     <serverData>
+      <paths name="ec2-35-177-189-207.eu-west-2.compute.amazonaws.com">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ubuntu/Developer/FakeNewsRecognition" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ms3u14@myrtle.ecs.soton.ac.uk">
         <serverdata>
           <mappings>

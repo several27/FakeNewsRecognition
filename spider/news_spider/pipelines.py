@@ -30,7 +30,7 @@ class ScrapedPage(BaseModel):
     updated_at = DateTimeField(null=False, default=datetime.now())
 
     # cache
-    _cache_urls = None  # type: pybloom_live.ScalableBloomFilter
+    _cache_urls = None  # type: Set[int]
 
     @staticmethod
     def url_exists(url):
@@ -52,14 +52,13 @@ class ScrapedPage(BaseModel):
 
                 print('Got %s with id: %s' % (len(all_scraped), last_id))
 
-            ScrapedPage._cache_urls = pybloom_live.ScalableBloomFilter(
-                mode=pybloom_live.ScalableBloomFilter.SMALL_SET_GROWTH)
+            ScrapedPage._cache_urls = set()
             for url in all_scraped:
-                ScrapedPage._cache_urls.add(url)
+                ScrapedPage._cache_urls.add(hash(url))
 
             print('Unique urls: %s' % len(ScrapedPage._cache_urls))
 
-        return url in ScrapedPage._cache_urls
+        return hash(url) in ScrapedPage._cache_urls
 
     class Meta:
         db_table = 'fnr_scraped_pages'
@@ -68,6 +67,9 @@ class ScrapedPage(BaseModel):
             # Specify a unique multi-column index on from/to-user.
             (('batch', 'url'), True),
         )
+
+
+ScrapedPage.create_table()
 
 
 class NewsSpiderDropPipeline:
@@ -85,7 +87,7 @@ class NewsSpiderDropPipeline:
             item['html'] = None
             raise DropItem()
 
-        ScrapedPage._cache_urls.add(item['url'])
+        ScrapedPage._cache_urls.add(hash(item['url']))
 
         return item
 

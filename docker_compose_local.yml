@@ -1,0 +1,15 @@
+version: '3'
+services:
+  fnr_api:
+    build:
+      context: .
+    restart: always
+    environment:
+      FNR_DB_HOST: fake-news-recognition.cq7yn8vmuhaf.eu-west-2.rds.amazonaws.com
+      FNR_DB_NAME: postgres
+      FNR_DB_PASSWORD: 4ezNaj60
+      FNR_DB_USER: several27
+    volumes:
+      - .:/src
+    ports:
+      - 7070:80
