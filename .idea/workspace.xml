@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="FNR API &amp; Beginnings of the API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docker_compose_local.yml" afterPath="$PROJECT_DIR$/docker_compose_local.yml" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.html" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.ts" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.module.ts" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" />
+      <change beforePath="$PROJECT_DIR$/docker_compose_local.yml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,8 +62,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="95" column="41" lean-forward="true" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+            <state relative-caret-position="375">
+              <caret line="112" column="14" lean-forward="true" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -806,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522710823355</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="First bare bone version of the website">
+      <created>1522712371920</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1522712371920</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -831,7 +835,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.276644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25472412" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08045977" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16985951" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20600858" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23032904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -887,7 +891,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixes" />
     <MESSAGE value="Small fixes" />
     <MESSAGE value="Newspaper timing etc" />
     <MESSAGE value="Extract data scripts" />
@@ -912,7 +915,8 @@
     <MESSAGE value="Lots of things" />
     <MESSAGE value="FNR API" />
     <MESSAGE value="FNR API &amp; Beginnings of the API" />
-    <option name="LAST_COMMIT_MESSAGE" value="FNR API &amp; Beginnings of the API" />
+    <MESSAGE value="First bare bone version of the website" />
+    <option name="LAST_COMMIT_MESSAGE" value="First bare bone version of the website" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1340,8 +1344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="95" column="41" lean-forward="true" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
+        <state relative-caret-position="375">
+          <caret line="112" column="14" lean-forward="true" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
