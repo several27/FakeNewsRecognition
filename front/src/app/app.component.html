@@ -1,0 +1,19 @@
+<h1>
+  Fake News Recognition</h1>
+
+<div class="container">
+  <mat-form-field>
+    <input matInput placeholder="Website URL">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Article title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Article content (about 300 characters recommended)"></textarea>
+  </mat-form-field>
+</div>
+
+<ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="predictionsMulticlass">
+</ngx-charts-pie-grid>

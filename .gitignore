@@ -5,3 +5,4 @@ front/node_modules
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+docker_compose_local.yml

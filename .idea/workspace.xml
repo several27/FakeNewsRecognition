@@ -1,55 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="FNR API">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/helpers.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/server.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/.angular-cli.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/e2e/app.e2e-spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/e2e/app.po.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/e2e/tsconfig.e2e.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/karma.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/protractor.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/assets/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/environments/environment.prod.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/environments/environment.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/main.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/polyfills.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/test.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/tsconfig.app.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/tsconfig.spec.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/typings.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/tsconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/tslint.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/machines/bilstm_stacked.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/machines/lstm_stacked.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py" />
+    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="FNR API &amp; Beginnings of the API">
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/FakeNewsRecognition.iml" afterPath="$PROJECT_DIR$/.idea/FakeNewsRecognition.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/maciej.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/maciej.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" afterPath="$PROJECT_DIR$/api/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/api/bilstm_weights.010-0.9848.hdf5" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/database.py" afterPath="$PROJECT_DIR$/api/database.py" />
-      <change beforePath="$PROJECT_DIR$/api/uwsgi.ini" afterPath="$PROJECT_DIR$/api/uwsgi.ini" />
-      <change beforePath="$PROJECT_DIR$/misc/notebooks/2018-03-03 - LIME model explanations.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change beforePath="$PROJECT_DIR$/docker_compose_local.yml" afterPath="$PROJECT_DIR$/docker_compose_local.yml" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.html" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/app.component.ts" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" />
+      <change beforePath="$PROJECT_DIR$/front/src/app/app.module.ts" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" />
+      <change beforePath="$PROJECT_DIR$/front/src/styles.css" afterPath="$PROJECT_DIR$/front/src/styles.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,14 +67,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            <state relative-caret-position="360">
+              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.elasticbeanstalk/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/front/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -162,8 +134,28 @@
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="46" />
+            <state relative-caret-position="255">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="docker_compose_local.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker_compose_local.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -190,7 +182,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>duplic</find>
       <find>cleaned</find>
       <find>news_cleaned_2018_01_29+postgres.db</find>
       <find>news_cleaned_2018_02_13</find>
@@ -220,6 +211,7 @@
       <find>fasttex</find>
       <find>boto3</find>
       <find>os</find>
+      <find>src</find>
     </findStrings>
     <replaceStrings>
       <replace>/api</replace>
@@ -268,8 +260,6 @@
         <option value="$PROJECT_DIR$/machines/tcn.py" />
         <option value="$PROJECT_DIR$/api/docker_nginx_site.conf" />
         <option value="$PROJECT_DIR$/api/docker_nginx.conf" />
-        <option value="$PROJECT_DIR$/docker_compose_local.yml" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/api/database.py" />
         <option value="$PROJECT_DIR$/misc/test_model_on_4.py" />
         <option value="$PROJECT_DIR$/api/__init__.py" />
@@ -279,12 +269,14 @@
         <option value="$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py" />
         <option value="$PROJECT_DIR$/machines/lstm_stacked.py" />
         <option value="$PROJECT_DIR$/machines/bilstm_stacked.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/front/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/front/src/styles.css" />
         <option value="$PROJECT_DIR$/front/src/index.html" />
         <option value="$PROJECT_DIR$/front/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/api/server.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/docker_compose_local.yml" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
       </list>
     </option>
   </component>
@@ -297,11 +289,10 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/data/5_fake-news-detector/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="854" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="22" />
-    <option name="width" value="1706" />
-    <option name="height" value="1418" />
+    <option name="width" value="1440" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -328,12 +319,12 @@
             <path>
               <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
               <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name=".elasticbeanstalk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
               <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -808,7 +799,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522536250735</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="FNR API &amp; Beginnings of the API">
+      <created>1522707271427</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1522707271427</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -823,7 +821,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="854" y="22" width="1706" height="1418" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -833,11 +831,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.276644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25472412" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24565382" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17307693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19350961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08045977" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20600858" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23032904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4496997" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29206732" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35978836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -851,7 +850,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23882504" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -889,7 +887,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Small fixes, scraper restart" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Small fixes" />
     <MESSAGE value="Newspaper timing etc" />
@@ -914,7 +911,8 @@
     <MESSAGE value="Some more quantitative &amp; gualitative data exploration" />
     <MESSAGE value="Lots of things" />
     <MESSAGE value="FNR API" />
-    <option name="LAST_COMMIT_MESSAGE" value="FNR API" />
+    <MESSAGE value="FNR API &amp; Beginnings of the API" />
+    <option name="LAST_COMMIT_MESSAGE" value="FNR API &amp; Beginnings of the API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -961,13 +959,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../../../../../Caches/PyCharm2017.3/remote_sources/166033041/54034697/keras/layers/recurrent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29625">
-          <caret line="1993" column="8" lean-forward="false" selection-start-line="1993" selection-start-column="8" selection-end-line="1993" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server" />
     <entry file="file://$PROJECT_DIR$/data/7_opensources_co/news_cleaned_2018_01_29_missing_domains.csv" />
     <entry file="file://$PROJECT_DIR$/data/7_opensources_co/news_cleaned_2018_01_29_sample.csv">
@@ -1144,14 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker_compose_local.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/4_fake_real_news_dataset/fake_or_real_news.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="0">
@@ -1286,7 +1269,7 @@
     <entry file="file://$PROJECT_DIR$/front/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
           </folding>
@@ -1301,26 +1284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1333,21 +1300,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/front/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        <state relative-caret-position="360">
+          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.elasticbeanstalk/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker_compose_local.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
