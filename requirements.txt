@@ -1,3 +1,8 @@
+voluptuous
+flask
+keras
+gensim
+numpy
 peewee
 newspaper3k
 ujson

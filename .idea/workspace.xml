@@ -1,28 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="Lots of things">
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/bilstm_weights.010-0.9848.hdf5" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/api/database.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docker_compose_local.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/misc/2018-03-30 - domain difference between opensources and 2018_02_13 dataset.py" />
+    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="FNR API">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/helpers.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/api/server.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/.angular-cli.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/.editorconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/e2e/app.e2e-spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/e2e/app.po.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/e2e/tsconfig.e2e.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/karma.conf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/protractor.conf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.spec.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.component.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/app/app.module.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/assets/.gitkeep" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/environments/environment.prod.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/environments/environment.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/favicon.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/main.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/polyfills.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/test.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/tsconfig.app.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/tsconfig.spec.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/src/typings.d.ts" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/tsconfig.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/front/tslint.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/machines/bilstm_stacked.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/machines/lstm_stacked.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/FakeNewsRecognition.iml" afterPath="$PROJECT_DIR$/.idea/FakeNewsRecognition.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/maciej.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/maciej.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" afterPath="$PROJECT_DIR$/Dockerfile" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/api/__init__.py" afterPath="$PROJECT_DIR$/api/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/api/docker_nginx.conf" afterPath="$PROJECT_DIR$/api/docker_nginx.conf" />
-      <change beforePath="$PROJECT_DIR$/api/docker_nginx_site.conf" afterPath="$PROJECT_DIR$/api/docker_nginx_site.conf" />
+      <change beforePath="$PROJECT_DIR$/api/bilstm_weights.010-0.9848.hdf5" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/api/database.py" afterPath="$PROJECT_DIR$/api/database.py" />
       <change beforePath="$PROJECT_DIR$/api/uwsgi.ini" afterPath="$PROJECT_DIR$/api/uwsgi.ini" />
-      <change beforePath="$PROJECT_DIR$/machines/tcn.py" afterPath="$PROJECT_DIR$/machines/tcn.py" />
-      <change beforePath="$PROJECT_DIR$/machines/tcn_all.py" afterPath="$PROJECT_DIR$/machines/tcn_all.py" />
-      <change beforePath="$PROJECT_DIR$/misc/scraper.py" afterPath="$PROJECT_DIR$/misc/scraper.py" />
+      <change beforePath="$PROJECT_DIR$/misc/notebooks/2018-03-03 - LIME model explanations.ipynb" afterPath="" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change beforePath="$PROJECT_DIR$/spider/news_spider/pipelines.py" afterPath="$PROJECT_DIR$/spider/news_spider/pipelines.py" />
-      <change beforePath="$PROJECT_DIR$/spider/news_spider/spiders/__init__.py" afterPath="$PROJECT_DIR$/spider/news_spider/spiders/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +61,12 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$2018_02_26___remove_duplicated_content.coverage" NAME="2018-02-26 - remove duplicated content Coverage Results" MODIFIED="1520169566330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$2018_02_21___count_unique_articles.coverage" NAME="2018-02-21 - count_unique_articles Coverage Results" MODIFIED="1519222383145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FakeNewsRecognition$Nosetests_in_test_model_on_4_py.coverage" NAME="Nosetests in test_model_on_4.py Coverage Results" MODIFIED="1522610091665" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/misc" />
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$data_full.coverage" NAME="data_full Coverage Results" MODIFIED="1520150861929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$extract_domain.coverage" NAME="extract_domain Coverage Results" MODIFIED="1517534377961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$scrape_nytimes.coverage" NAME="scrape_nytimes Coverage Results" MODIFIED="1518049078339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$scraper.coverage" NAME="scraper Coverage Results" MODIFIED="1509892096507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FakeNewsRecognition$2018_04_01___evaluate_model_on_4.coverage" NAME="2018-04-01 - evaluate_model_on_4 Coverage Results" MODIFIED="1522613481628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="/home/ubuntu/Developer/FakeNewsRecognition" />
     <SUITE FILE_PATH="coverage/FakeNewsRecognition$2018_03_03___qualitative_machine_efficiency.coverage" NAME="2018-03-03 - qualitative machine efficiency Coverage Results" MODIFIED="1520100103217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -76,66 +105,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/__init__.py">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="210" column="85" lean-forward="false" selection-start-line="210" selection-start-column="85" selection-end-line="210" selection-end-column="85" />
+            <state relative-caret-position="495">
+              <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
               <folding>
-                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="542">
-                <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tcn_all.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/machines/tcn_all.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uwsgi.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/uwsgi.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docker_uwsgi.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/docker_uwsgi.sh">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/front/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,11 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.csv</find>
-      <find>test&quot;</find>
-      <find>Skipe</find>
-      <find>2d</find>
-      <find>.db</find>
       <find>duplic</find>
       <find>cleaned</find>
       <find>news_cleaned_2018_01_29+postgres.db</find>
@@ -182,6 +215,11 @@
       <find>ssl</find>
       <find>443</find>
       <find>newspaper</find>
+      <find>path_fasttext_jsonl</find>
+      <find>bilstm_</find>
+      <find>fasttex</find>
+      <find>boto3</find>
+      <find>os</find>
     </findStrings>
     <replaceStrings>
       <replace>/api</replace>
@@ -196,17 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data/7_fake_news/scraper_results.jsonl" />
-        <option value="$PROJECT_DIR$/scraper.py" />
-        <option value="$PROJECT_DIR$/spider.py" />
-        <option value="$PROJECT_DIR$/spider/news_spider/settings.py" />
-        <option value="$PROJECT_DIR$/spider/news_spider/items.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bd0d92c9-3ee9-4f9f-8f9b-34658d40639a/console.sql" />
-        <option value="$PROJECT_DIR$/extract_content_timeit.py" />
-        <option value="$PROJECT_DIR$/sample_data.py" />
-        <option value="$PROJECT_DIR$/extract_domain.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0bea0869-4975-47f4-b1a0-c6fef4a25976/console.sql" />
-        <option value="$PROJECT_DIR$/scrape_nytimes.py" />
         <option value="$PROJECT_DIR$/extract_content.py" />
         <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/machines/test.py" />
@@ -235,18 +262,29 @@
         <option value="$PROJECT_DIR$/misc/scraper.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/misc/2018-03-30 - domain difference between opensources and 2018_02_13 dataset.py" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/machines/bilstm.json" />
         <option value="$PROJECT_DIR$/machines/tcn_all.py" />
         <option value="$PROJECT_DIR$/machines/tcn.json" />
-        <option value="$PROJECT_DIR$/api/database.py" />
         <option value="$PROJECT_DIR$/machines/tcn.py" />
         <option value="$PROJECT_DIR$/api/docker_nginx_site.conf" />
         <option value="$PROJECT_DIR$/api/docker_nginx.conf" />
         <option value="$PROJECT_DIR$/docker_compose_local.yml" />
         <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/api/uwsgi.ini" />
+        <option value="$PROJECT_DIR$/api/database.py" />
+        <option value="$PROJECT_DIR$/misc/test_model_on_4.py" />
         <option value="$PROJECT_DIR$/api/__init__.py" />
+        <option value="$PROJECT_DIR$/api/uwsgi.ini" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/api/helpers.py" />
+        <option value="$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py" />
+        <option value="$PROJECT_DIR$/machines/lstm_stacked.py" />
+        <option value="$PROJECT_DIR$/machines/bilstm_stacked.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/front/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/front/src/styles.css" />
+        <option value="$PROJECT_DIR$/front/src/index.html" />
+        <option value="$PROJECT_DIR$/front/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/api/server.py" />
       </list>
     </option>
   </component>
@@ -260,10 +298,10 @@
     <handled-path value="$PROJECT_DIR$/data/5_fake-news-detector/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="932" />
-    <option name="y" value="417" />
-    <option name="width" value="1440" />
-    <option name="height" value="996" />
+    <option name="x" value="854" />
+    <option name="y" value="22" />
+    <option name="width" value="1706" />
+    <option name="height" value="1418" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -280,7 +318,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -310,49 +368,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="machines" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
-              <item name="news_spider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FakeNewsRecognition" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FakeNewsRecognition" type="462c0819:PsiDirectoryNode" />
-              <item name="spider" type="462c0819:PsiDirectoryNode" />
-              <item name="news_spider" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
@@ -363,18 +383,18 @@
     <property name="SearchEverywhereHistoryKey" value="data_ge&#9;FILE&#9;file:///Users/maciej/Library/Mobile Documents/com~apple~CloudDocs/Study/UoS CompSci Bsc/3rd Year, 1st Semester/Part III Project/FakeNewsRecognition/machines/data_generator.py&#10;databas&#9;FILE&#9;file:///Users/maciej/Library/Mobile Documents/com~apple~CloudDocs/Study/UoS CompSci Bsc/3rd Year, 1st Semester/Part III Project/FakeNewsRecognition/preprocessing/database.py&#10;data&#9;FILE&#9;file:///Users/maciej/Library/Mobile Documents/com~apple~CloudDocs/Study/UoS CompSci Bsc/3rd Year, 1st Semester/Part III Project/FakeNewsRecognition/machines/data_generator.py&#10;count_un&#9;FILE&#9;file:///Users/maciej/Library/Mobile Documents/com~apple~CloudDocs/Study/UoS CompSci Bsc/3rd Year, 1st Semester/Part III Project/FakeNewsRecognition/2018-02-21 - count_unique_articles.py&#10;python&#9;ACTION&#9;ActivatePythonConsoleToolWindow&#10;Tiffimagepl&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/api" />
-      <recent name="$PROJECT_DIR$/preprocessing" />
-      <recent name="$PROJECT_DIR$/misc" />
-      <recent name="$PROJECT_DIR$/misc/notebooks" />
-      <recent name="$PROJECT_DIR$/data/fake_news_corpus" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/data/7_opensources_co" />
       <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$/data/7_fake_news" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/preprocessing" />
+      <recent name="$PROJECT_DIR$/misc" />
+      <recent name="$PROJECT_DIR$/misc/notebooks" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -389,26 +409,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2018-02-26 - remove duplicated content">
-    <configuration name="2018-02-21 - count_unique_articles" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="FakeNewsRecognition" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/misc/2018-02-21 - count_unique_articles.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.2018-04-01 - evaluate_model_on_4">
     <configuration name="2018-02-26 - remove duplicated content" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -447,6 +448,29 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="2018-04-01 - evaluate_model_on_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="FNR_DB_USER" value="several27" />
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="FNR_DB_HOST" value="fake-news-recognition.cq7yn8vmuhaf.eu-west-2.rds.amazonaws.com" />
+        <env name="FNR_DB_NAME" value="postgres" />
+        <env name="FNR_DB_PASSWORD" value="4ezNaj60" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="/home/ubuntu/Developer/FakeNewsRecognition" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="FakeNewsRecognition" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="data_full" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -466,39 +490,41 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="scrape_nytimes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Nosetests in 2018-04-01 - evaluate_model_on_4.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="FNR_DB_USER" value="several27" />
+        <env name="FNR_DB_HOST" value="fake-news-recognition.cq7yn8vmuhaf.eu-west-2.rds.amazonaws.com" />
+        <env name="FNR_DB_NAME" value="postgres" />
+        <env name="FNR_DB_PASSWORD" value="4ezNaj60" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/misc" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="FakeNewsRecognition" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/misc/scrape_nytimes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.scrape_nytimes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.2018-02-21 - count_unique_articles" />
-      <item index="2" class="java.lang.String" itemvalue="Python.2018-02-26 - remove duplicated content" />
-      <item index="3" class="java.lang.String" itemvalue="Python.2018-03-03 - qualitative machine efficiency" />
-      <item index="4" class="java.lang.String" itemvalue="Python.data_full" />
+      <item index="0" class="java.lang.String" itemvalue="Python.2018-02-26 - remove duplicated content" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2018-03-03 - qualitative machine efficiency" />
+      <item index="2" class="java.lang.String" itemvalue="Python.data_full" />
+      <item index="3" class="java.lang.String" itemvalue="Python.2018-04-01 - evaluate_model_on_4" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in 2018-04-01 - evaluate_model_on_4.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2018-02-26 - remove duplicated content" />
-        <item index="1" class="java.lang.String" itemvalue="Python.data_full" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2018-03-03 - qualitative machine efficiency" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2018-02-21 - count_unique_articles" />
-        <item index="4" class="java.lang.String" itemvalue="Python.scrape_nytimes" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2018-04-01 - evaluate_model_on_4" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in 2018-04-01 - evaluate_model_on_4.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python.2018-02-26 - remove duplicated content" />
+        <item index="3" class="java.lang.String" itemvalue="Python.data_full" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2018-03-03 - qualitative machine efficiency" />
       </list>
     </recent_temporary>
   </component>
@@ -775,28 +801,46 @@
       <option name="project" value="LOCAL" />
       <updated>1521676763340</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="FNR API">
+      <created>1522536250735</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1522536250735</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetests_in_test_model_on_4_py - 2018.04.01 at 20h 12m 55s.xml">
+      <configuration name="Nosetests in test_model_on_4.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_model_on_4_py - 2018.04.01 at 20h 13m 53s.xml">
+      <configuration name="Nosetests in test_model_on_4.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_test_model_on_4_py - 2018.04.01 at 20h 15m 11s.xml">
+      <configuration name="Nosetests in test_model_on_4.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="932" y="417" width="1440" height="996" extended-state="0" />
+    <frame x="854" y="22" width="1706" height="1418" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24648787" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19742489" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="678" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24904214" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27713922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19737887" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="678" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24867725" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.276644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2552719" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24639289" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1795422" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16738197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25472412" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24565382" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17307693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19350961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4496997" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29206732" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36015326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35978836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -807,7 +851,36 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23882504" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24648787" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27764422" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4496997" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35978836" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19737887" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="678" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24867725" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.276644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25472412" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24639289" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23882504" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19350961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29206732" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -816,7 +889,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Small changes" />
     <MESSAGE value="Small fixes, scraper restart" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="Small fixes" />
@@ -841,7 +913,8 @@
     <MESSAGE value="Few fixes &amp; new BiLSTM model" />
     <MESSAGE value="Some more quantitative &amp; gualitative data exploration" />
     <MESSAGE value="Lots of things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lots of things" />
+    <MESSAGE value="FNR API" />
+    <option name="LAST_COMMIT_MESSAGE" value="FNR API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -869,7 +942,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="31" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -888,97 +961,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/misc/cleaner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/misc/data_full.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/misc/extract_content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="92" column="36" lean-forward="false" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="149" column="35" lean-forward="false" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/misc/2018-02-26 - remove duplicated content.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="51" column="17" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="60" column="6" lean-forward="false" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f20e61a2-abaa-4249-b58f-c2092831db23/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5513ea05-d621-4edd-a982-6d0370cf0b0c/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7f9729fd-a6dd-4f03-b71e-84f0c55c2e9c/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/2377ab6b/5513ea05-d621-4edd-a982-6d0370cf0b0c/main.news_cleaned">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c5e6e47a-a198-44aa-90fe-c2f997f3a9f5/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="true" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/30d5f634-4bf2-49fc-afd1-5317b80ab9d6/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../../../Caches/PyCharm2017.3/remote_sources/166033041/54034697/keras/layers/wrappers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3690">
-          <caret line="255" column="8" lean-forward="false" selection-start-line="255" selection-start-column="8" selection-end-line="255" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../../../Caches/PyCharm2017.3/remote_sources/166033041/54034697/keras/layers/recurrent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29625">
@@ -986,27 +968,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machines/lstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server" />
-    <entry file="file://$PROJECT_DIR$/data/7_opensources_co/news_cleaned_2018_01_29_missing_domains.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/7_opensources_co/news_cleaned_2018_01_29_missing_domains.csv" />
     <entry file="file://$PROJECT_DIR$/data/7_opensources_co/news_cleaned_2018_01_29_sample.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="3" column="338" lean-forward="true" selection-start-line="3" selection-start-column="338" selection-end-line="3" selection-end-column="338" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1014,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="235" column="8" lean-forward="false" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="194" column="4" lean-forward="false" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1062,7 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-424">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1078,7 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1086,15 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,7 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="98" column="42" lean-forward="true" selection-start-line="98" selection-start-column="42" selection-end-line="98" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-308">
           <caret line="87" column="33" lean-forward="true" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1066,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5820">
           <caret line="388" column="13" lean-forward="false" selection-start-line="388" selection-start-column="13" selection-end-line="388" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,16 +1077,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machines/tcn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="102" column="73" lean-forward="true" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#12#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/misc/notebooks/Generate fastText.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -1147,69 +1084,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/machines/bilstm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker_compose_local.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/docker_nginx.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/docker_nginx.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="77" column="34" lean-forward="false" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/docker_nginx_site.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="31" column="9" lean-forward="true" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="6" lean-forward="false" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1217,49 +1095,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
           <caret line="5056" column="8" lean-forward="false" selection-start-line="5056" selection-start-column="8" selection-end-line="5056" selection-end-column="8" />
-          <folding>
-            <marker date="1517853907937" expanded="true" signature="84440:84536" ph="SELECT name sqlite_master" />
-            <marker date="1517853907937" expanded="true" signature="84669:84770" ph="SELECT name,... " />
-            <marker date="1517853907937" expanded="true" signature="88794:88897" ph="SELECT table... pg_tables" />
-            <marker date="1517853907937" expanded="true" signature="89099:89878" ph="SELECT i.rel... pg_class" />
-            <marker date="1517853907937" expanded="true" signature="90164:90344" ph="SELECT colum... columns" />
-            <marker date="1517853907937" expanded="true" signature="90692:91142" ph="SELECT kc.co... table_constraints" />
-            <marker date="1517853907937" expanded="true" signature="91385:92054" ph="SELECT kcu.c... table_constraints" />
-            <marker date="1517853907937" expanded="true" signature="92327:92492" ph="SELECT COUNT... pg_class" />
-            <marker date="1517853907937" expanded="true" signature="96760:96910" ph="SELECT colum... columns" />
-            <marker date="1517853907937" expanded="true" signature="97458:97765" ph="SELECT colum... key_column_usage" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machines/bilstm_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/docker_uwsgi.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="28" lean-forward="true" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/machines/tcn_all.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1267,8 +1109,19 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="542">
-            <caret line="40" column="19" lean-forward="true" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <first_editor relative-caret-position="600">
+            <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/4_fake_real_news_dataset/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1277,18 +1130,223 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/uwsgi.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" lean-forward="false" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker_compose_local.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/4_fake_real_news_dataset/fake_or_real_news.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../../Caches/PyCharm2017.3/remote_sources/525589034/1899232141/psycopg2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="717">
+          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2966">
+          <caret line="50" column="15" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../../Caches/PyCharm2017.3/python_stubs/-1679320520/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="262" column="4" lean-forward="false" selection-start-line="262" selection-start-column="4" selection-end-line="262" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/bilstm_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/misc/2018-04-01 - evaluate_model_on_4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/tcn_all.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="55" column="34" lean-forward="false" selection-start-line="55" selection-start-column="34" selection-end-line="55" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/lstm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/tcn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="99" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/bilstm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/lstm_stacked.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="886">
+          <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/machines/bilstm_stacked.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="69" lean-forward="true" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="98" column="27" lean-forward="true" selection-start-line="98" selection-start-column="27" selection-end-line="98" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/docker_nginx.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="77" column="34" lean-forward="false" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/docker_nginx_site.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="46" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="210" column="85" lean-forward="false" selection-start-line="210" selection-start-column="85" selection-end-line="210" selection-end-column="85" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="13" lean-forward="true" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

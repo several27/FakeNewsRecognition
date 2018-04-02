@@ -10,8 +10,8 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
-      <webServer id="3460e36b-fa25-4606-a26e-6252125221bd" name="ec2-35-177-189-207.eu-west-2.compute.amazonaws.com" url="http://ec2-35-177-189-207.eu-west-2.compute.amazonaws.com">
-        <fileTransfer host="ec2-35-177-189-207.eu-west-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/Documents/Developer/FuseMind/researchably-main.pem" accessType="SFTP" keyPair="true">
+      <webServer id="3460e36b-fa25-4606-a26e-6252125221bd" name="ec2-52-56-205-241.eu-west-2.compute.amazonaws.com" url="http://ec2-52-56-205-241.eu-west-2.compute.amazonaws.com">
+        <fileTransfer host="ec2-52-56-205-241.eu-west-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/Documents/Developer/FuseMind/researchably-main.pem" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
