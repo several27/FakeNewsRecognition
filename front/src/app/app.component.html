@@ -3,17 +3,23 @@
 
 <div class="container">
   <mat-form-field>
-    <input matInput placeholder="Website URL">
+    <input matInput placeholder="Website URL" [(ngModel)]="url">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Article title">
+    <input matInput placeholder="Article title" [(ngModel)]="title">
   </mat-form-field>
 
   <mat-form-field>
-    <textarea matInput placeholder="Article content (about 300 characters recommended)"></textarea>
+    <textarea matInput placeholder="Article content (about 300 characters recommended)" [(ngModel)]="content"></textarea>
   </mat-form-field>
 </div>
+
+<button mat-button mat-raised-button (click)="recognise()">Recognise</button>
+
+<ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="predictionsBinary" [legend]="showLegend"
+  [explodeSlices]="explodeSlices" [labels]="showLabels" doughnut="true">
+</ngx-charts-pie-chart>
 
 <ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="predictionsMulticlass">
 </ngx-charts-pie-grid>
