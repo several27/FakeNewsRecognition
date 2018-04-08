@@ -8,13 +8,14 @@ from keras.layers import Dropout, Input, Conv1D, Activation, Add, Dense, Flatten
 from keras.models import Model
 from tqdm import tqdm
 
+from machines.callbacks.save_to_spread import SaveToSpread
 from machines.data_generator import embedded_news_generator, path_data, path_news_train, path_news_val, \
     path_news_shuffled, path_fasttext_jsonl
 
 max_words = 300
 input_shape = max_words, 100
 
-batch_size = 64
+batch_size = 512
 epochs = 20
 
 
@@ -85,10 +86,12 @@ def train():
     print('Train size:', train_size, '; test size:', test_size, '; val size:', val_size)
 
     with tf.device('/gpu:0'):
-        model = tcn_model(num_channels=[1000, 1000, 800, 800, 600, 600, 400, 200, 200, 100, 100, 50, 50])
+        model = tcn_model(num_channels=[32])
         model.summary()
-        checkpoint = ModelCheckpoint(path_data + 'tsn_weights_1000_to_50.{epoch:03d}-{val_acc:.4f}.hdf5',
+        checkpoint = ModelCheckpoint(path_data + 'tsn_weights_100.{epoch:03d}-{val_acc:.4f}.hdf5',
                                      monitor='val_acc', verbose=1, mode='auto')
+        save_to_spread = SaveToSpread('2018_02_13', 'tcn.py', 'num_channels=[2000, 2000, 100, 100]',
+                                      'tsn_weights_100.{epoch:03d}-{val_acc:.4f}.hdf5')
 
         print('Loading fasttext...')
         fasttext_dict = {}
@@ -104,7 +107,7 @@ def train():
                             steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
                             validation_data=embedded_news_generator(path_news_val, batch_size, fasttext_dict,
                                                                     max_words),
-                            validation_steps=val_size // batch_size, callbacks=[checkpoint])
+                            validation_steps=val_size // batch_size, callbacks=[checkpoint, save_to_spread])
 
 
 def test():

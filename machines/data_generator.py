@@ -36,6 +36,12 @@ path_news_train_all = path_news_cleaned + '_all.preprocessed.shuffled.train.json
 path_news_test_all = path_news_cleaned + '_all.preprocessed.shuffled.test.jsonl'
 path_news_val_all = path_news_cleaned + '_all.preprocessed.shuffled.val.jsonl'
 
+path_news_preprocessed_all_separate = path_news_cleaned + '_all_separate.preprocessed.jsonl'
+path_news_shuffled_all_separate = path_news_cleaned + '_all_separate.preprocessed.shuffled.jsonl'
+path_news_train_all_separate = path_news_cleaned + '_all_separate.preprocessed.shuffled.train.jsonl'
+path_news_test_all_separate = path_news_cleaned + '_all_separate.preprocessed.shuffled.test.jsonl'
+path_news_val_all_separate = path_news_cleaned + '_all_separate.preprocessed.shuffled.val.jsonl'
+
 # path_news_train_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.train.jsonl'
 # path_news_test_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.test.jsonl'
 # path_news_val_embedded = path_news_cleaned + '.preprocessed.shuffled.embedded.val.jsonl'
@@ -55,15 +61,23 @@ def load_fasttext():
     return fasttext_dict
 
 
-def _news_generator_process_line(line, fasttext, max_words):
+def _news_generator_process_line(line, fasttext, max_words_content, separate=False, max_words_title=50):
     article = ujson.loads(line)
 
-    embedding = np.zeros((max_words, 100))
-    for i, word in enumerate(article['content'][:max_words]):
+    embedding_content = np.zeros((max_words_content, 100))
+    for i, word in enumerate(article['content'][:max_words_content]):
         if word in fasttext:
-            embedding[i] = fasttext[word]
+            embedding_content[i] = fasttext[word]
 
-    return embedding, article['label']
+    if separate:
+        embedding_title = np.zeros((max_words_title, 100))
+        for i, word in enumerate(article['title'][:max_words_title]):
+            if word in fasttext:
+                embedding_title[i] = fasttext[word]
+
+        return (embedding_title, embedding_content), article['label']
+
+    return embedding_content, article['label']
 
 
 def embedded_news_generator(path, batch, fasttext, max_words):
@@ -83,6 +97,33 @@ def embedded_news_generator(path, batch, fasttext, max_words):
                 else:
                     batch_embedding[batch_i] = embedding
                     batch_label[batch_i, 0] = label
+                    batch_i += 1
+
+
+def embedded_news_generator_separate(path, batch, fasttext, max_words_title, max_words_content):
+    while True:
+        with open(path, 'r') as in_news:
+            batch_i = 0
+            batch_embedding_title = np.zeros((batch, max_words_title, 100))
+            batch_embedding_content = np.zeros((batch, max_words_content, 100))
+            batch_label = np.zeros((batch, 1))
+            for line in in_news:
+                embedding, label = _news_generator_process_line(line, fasttext, max_words_content, True,
+                                                                max_words_title)
+
+                if label not in ('fake', 'conspiracy', 'unreliable', 'reliable'):
+                    continue
+
+                if (batch_i + 1) == batch:
+                    yield [batch_embedding_title, batch_embedding_content], batch_label
+                    batch_embedding_title = np.zeros((batch, max_words_title, 100))
+                    batch_embedding_content = np.zeros((batch, max_words_content, 100))
+                    batch_label = np.zeros((batch, 1))
+                    batch_i = 0
+                else:
+                    batch_embedding_title[batch_i] = embedding[0]
+                    batch_embedding_content[batch_i] = embedding[1]
+                    batch_label[batch_i, 0] = 1 if label == 'reliable' else 0
                     batch_i += 1
 
 
@@ -166,7 +207,7 @@ def embedded_db_news_generator(path, batch, max_words):
 #                 yield embeddings[pointer:pointer_end], labels[pointer:pointer_end]
 
 
-def news_generator(binary=True):
+def news_generator(binary=True, separate=False):
     with tqdm() as progress:
         for df_news_chunk in pd.read_csv(path_news_csv, encoding='utf-8', engine='python', chunksize=10 * 1000):
             if binary:
@@ -184,24 +225,41 @@ def news_generator(binary=True):
                     continue
 
                 try:
-                    yield int(row.id), '%s %s' % (row.title, row.content), label
+                    if separate:
+                        yield int(row.id), (row.title, row.content), label
+                    else:
+                        yield int(row.id), '%s %s' % (row.title, row.content), label
                 except Exception:
                     print(row)
 
 
 def _preprocess_string(news):
     _id, con, label = news
-    return _id, preprocess_string(con), label
+
+    preprocessed_con = []
+    if isinstance(con, tuple):
+        for _con in con:
+            preprocessed_con.append(preprocess_string(str(_con)))
+
+        preprocessed_con = tuple(preprocessed_con)
+    else:
+        preprocessed_con = preprocess_string(con)
+
+    return _id, preprocessed_con, label
 
 
-def news_preprocessed_generator(binary=True, duplicates=True):
+def news_preprocessed_generator(binary=True, duplicates=True, separate=False):
     missing_words = {}
 
     counter = {'content_skipped': []}
     unique_hashes = {'content': set()}
 
     with multiprocessing.Pool(multiprocessing.cpu_count(), maxtasksperchild=1) as pool:
-        for _id, con, label in pool.imap(_preprocess_string, news_generator(binary), chunksize=1000):
+        for _id, con, label in pool.imap(_preprocess_string, news_generator(binary, separate), chunksize=1000):
+            title = None
+            if separate:
+                title, con = con
+
             if not duplicates:
                 if not isinstance(con, list):
                     continue
@@ -214,7 +272,7 @@ def news_preprocessed_generator(binary=True, duplicates=True):
 
                 unique_hashes['content'].add(content_hash)
 
-            yield _id, con, label, missing_words
+            yield _id, ((title, con) if separate else con), label, missing_words
 
     print('Skiped', len(counter['content_skipped']))
 
@@ -319,5 +377,41 @@ def prepare_all_data():
                                 out_val.write(line)
 
 
+def prepare_all_separate_data():
+    print('Preprocessing...')
+    if not os.path.isfile(path_news_preprocessed_all_separate):
+        with open(path_news_preprocessed_all_separate, 'w') as out_news_preprocessed:
+            for _id, con, label, missing_words in news_preprocessed_generator(binary=False, duplicates=False,
+                                                                              separate=True):
+                out_news_preprocessed.write(ujson.dumps({
+                    'id': _id, 'title': con[0], 'content': con[1], 'label': label
+                }) + '\n')
+    else:
+        print('Data already prepared! 😊')
+
+    print('Shuffling...')
+    if not os.path.isfile(path_news_shuffled_all_separate):
+        subprocess.call(['shuf', path_news_preprocessed_all_separate, '>', path_news_shuffled_all_separate])
+        # use shuffle instead: https://github.com/alexandres/lexvec/blob/master/shuffle.py
+
+    print('Counting...')
+    train_size, test_size, val_size, count_lines = train_test_val_count(path_news_shuffled_all_separate)
+
+    print('Splitting into train, test, and val...')
+    if not os.path.isfile(path_news_train_all_separate) or not os.path.isfile(path_news_test_all_separate) or \
+            not os.path.isfile(path_news_val_all_separate):
+        with open(path_news_shuffled_all_separate, 'r') as in_news:
+            with open(path_news_train_all_separate, 'w') as out_train:
+                with open(path_news_test_all_separate, 'w') as out_test:
+                    with open(path_news_val_all_separate, 'w') as out_val:
+                        for i, line in tqdm(enumerate(in_news)):
+                            if i < train_size:
+                                out_train.write(line)
+                            elif i < (train_size + test_size):
+                                out_test.write(line)
+                            else:
+                                out_val.write(line)
+
+
 if __name__ == '__main__':
-    prepare_all_data()
+    prepare_all_separate_data()

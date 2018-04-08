@@ -12,3 +12,4 @@ scrapy
 python-dotenv
 xlrd
 pybloom_live
+embeddings

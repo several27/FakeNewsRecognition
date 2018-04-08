@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="ms3u14@myrtle.ecs.soton.ac.uk">
     <serverData>
-      <paths name="ec2-35-176-215-209.eu-west-2.compute.amazonaws.com">
+      <paths name="ec2-35-176-43-178.eu-west-2.compute.amazonaws.com">
         <serverdata>
           <mappings>
             <mapping deploy="/home/ubuntu/Developer/FakeNewsRecognition" local="$PROJECT_DIR$" web="/" />

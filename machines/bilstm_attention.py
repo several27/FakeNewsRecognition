@@ -3,34 +3,44 @@ import ujson
 import numpy as np
 from gensim.models.fasttext import FastText
 from keras.callbacks import ModelCheckpoint
-from keras.layers import Dropout, Input, Dense, Bidirectional, CuDNNLSTM
+from keras.layers import Dropout, Input, Dense, Bidirectional, CuDNNLSTM, Flatten, Activation, RepeatVector, Permute, \
+    merge, K, Lambda
 from keras.models import Model
 from tqdm import tqdm
 
+from machines.callbacks.save_to_spread import SaveToSpread
 from machines.data_generator import embedded_news_generator, path_data, path_news_train, path_news_val, path_fasttext, \
     path_news_shuffled, path_fasttext_jsonl
+from machines.layers.attention_lstm import attention_3d_block
 
 max_words = 300
 input_shape = max_words, 100
 
-batch_size = 64
+batch_size = 1024
 epochs = 10
 
 
-def lstm_model(units=(64,), dropout=(0.5,), hidden_dims=17):
+def bilstm_attention_model(units=(64,), dropout=(0.5,), hidden_dims=17):
     batch_input_shape = (batch_size, input_shape[0], input_shape[1])
     model_input = Input(shape=input_shape, batch_shape=batch_input_shape)
 
     previous_layer = model_input
     for i, u in enumerate(units):
         if i != (len(units) - 1):
-            lstm = Bidirectional(CuDNNLSTM(u, return_sequences=True, stateful=True))(previous_layer)
+            previous_layer = Bidirectional(CuDNNLSTM(u, return_sequences=True, stateful=True))(previous_layer)
         else:
-            lstm = Bidirectional(CuDNNLSTM(u, stateful=True))(previous_layer)
+            previous_layer = Bidirectional(CuDNNLSTM(u, return_sequences=True, stateful=True))(previous_layer)
 
-        previous_layer = Dropout(dropout[i])(lstm)
+    attention = Dense(1, activation='tanh')(previous_layer)
+    attention = Flatten()(attention)
+    attention = Activation('softmax')(attention)
+    attention = RepeatVector(units[-1] * 2)(attention)
+    attention = Permute([2, 1])(attention)
 
-    z = Dense(hidden_dims, activation='relu')(previous_layer)
+    sent_representation = merge([previous_layer, attention], mode='mul')
+    sent_representation = Lambda(lambda x: K.mean(x, axis=-2), output_shape=(units[-1] * 2,))(sent_representation)
+
+    z = Dense(hidden_dims, activation='relu')(sent_representation)
     model_output = Dense(1, activation='sigmoid')(z)
 
     model = Model(model_input, model_output)
@@ -41,8 +51,8 @@ def lstm_model(units=(64,), dropout=(0.5,), hidden_dims=17):
 
 def train():
     with tf.device('/gpu:0'):
-        cnn_model = lstm_model(units=(128, 64, 32), dropout=(.2, .2, .2, .2, .1, .1, .1),
-                               hidden_dims=18)
+        cnn_model = bilstm_attention_model(units=(128, 64, 32,), dropout=(.2, .2, .2, .2, .1, .1, .1),
+                                           hidden_dims=18)
         cnn_model.summary()
 
     print('Counting input...')
@@ -68,13 +78,15 @@ def train():
                     fasttext_dict[embedding['word']] = np.asarray(embedding['embedding'])
                     progress.update()
 
-        checkpoint = ModelCheckpoint(path_data + 'bilstm_stacked_512_weights.{epoch:03d}-{val_acc:.4f}.hdf5',
+        checkpoint = ModelCheckpoint(path_data + 'bilstm_attention_s_weights.{epoch:03d}-{val_acc:.4f}.hdf5',
                                      monitor='val_acc', verbose=1, mode='auto')
+        save_to_spread = SaveToSpread('2018_02_13', 'bilstm_attention.py', 'units=(32,), dropout=(.2), hidden_dims=18',
+                                      'bilstm_attention_s_weights.{epoch:03d}-{val_acc:.4f}.hdf5')
         cnn_model.fit_generator(embedded_news_generator(path_news_train, batch_size, fasttext_dict, max_words),
                                 steps_per_epoch=train_size // batch_size, epochs=epochs, verbose=1,
                                 validation_data=embedded_news_generator(path_news_val, batch_size, fasttext_dict,
                                                                         max_words),
-                                validation_steps=val_size // batch_size, callbacks=[checkpoint])
+                                validation_steps=val_size // batch_size, callbacks=[checkpoint, save_to_spread])
 
 
 def test():
