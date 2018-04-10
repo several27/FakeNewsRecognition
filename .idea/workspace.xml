@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="Dist">
-      <change beforePath="" afterPath="$PROJECT_DIR$/front/dist/main.ba6ee2efce5b3ca53c2f.bundle.js" />
+    <list default="true" id="11e06441-d3e0-42ad-b376-9f726a850b33" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/api/server.py" afterPath="$PROJECT_DIR$/api/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,31 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="985">
-              <caret line="96" column="23" lean-forward="false" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docker_uwsgi.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/docker_uwsgi.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="docker_nginx_site.conf" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/docker_nginx_site.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="343">
+              <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -178,7 +158,6 @@
         <option value="$PROJECT_DIR$/front/src/styles.css" />
         <option value="$PROJECT_DIR$/front/src/index.html" />
         <option value="$PROJECT_DIR$/front/src/app/app.component.html" />
-        <option value="$PROJECT_DIR$/api/server.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/machines/spacy.py" />
@@ -196,6 +175,7 @@
         <option value="$PROJECT_DIR$/docker_compose_local.yml" />
         <option value="$PROJECT_DIR$/front/.gitignore" />
         <option value="$PROJECT_DIR$/api/docker_nginx_site.conf" />
+        <option value="$PROJECT_DIR$/api/server.py" />
       </list>
     </option>
   </component>
@@ -784,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523401191476</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Dist">
+      <created>1523401395015</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1523401395015</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -809,7 +796,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27586207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15197957" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6896552" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3908046" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19027181" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1271,14 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="985">
-          <caret line="96" column="23" lean-forward="false" selection-start-line="96" selection-start-column="23" selection-end-line="96" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/docker_uwsgi.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1315,8 +1294,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/docker_nginx_site.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="53" column="14" lean-forward="true" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
           <folding />
         </state>
       </provider>

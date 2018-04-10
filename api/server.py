@@ -43,14 +43,14 @@ welcome_message = 'Welcome in the Fake News Recognition API. Please see ' \
                   'https://github.com/several27/FakeNewsRecognition to learn more!'
 
 
-@app.route('/', methods=['GET'])
+@app.route('/api/', methods=['GET'])
 def home():
     return jsonify({
         'message': welcome_message
     })
 
 
-@app.route('/v1', methods=['GET'])
+@app.route('/api/v1', methods=['GET'])
 def home_v1():
     return jsonify({
         'message': welcome_message
@@ -70,7 +70,7 @@ model_all.load_weights(path_multiclass_model)
 print('Models loaded')
 
 
-@app.route('/v1/predict', methods=['POST'])
+@app.route('/api/v1/predict', methods=['POST'])
 def predict():
     data = request.get_json()
 
