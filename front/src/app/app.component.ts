@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
     this.resizeGraphs(this.mainView.nativeElement.offsetWidth - 20, 300);
 
     this.loading = true;
-    this.http.post('http://fakenewsrecognition.com/v1/predict', {
+    this.http.post('http://fakenewsrecognition.com/api/v1/predict', {
       url: this.url,
       title: this.title,
       content: this.content
