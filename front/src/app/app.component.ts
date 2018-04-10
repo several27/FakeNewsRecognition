@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,11 +6,12 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   predictionsMulticlass = [];
   predictionsBinary = [];
 
-  view: any[] = [700, 400];
+  viewMulticlass: number[] = [];
+  viewBinary: number[] = [];
 
   // options
   showXAxis = true;
@@ -24,7 +25,8 @@ export class AppComponent {
   yAxisLabel = 'Population';
 
   colorScheme = {
-    domain: ['#A10A28', '#5AA454', '#C7B42C', '#AAAAAA']
+    domain: ['#d50000', '#33691e', '#ffd600', '#ffab00', '#ff6d00', '#263238', '#1c2331', '#c51162', '#aa00ff',
+    '#6200ea', '#304ffe', '#2962ff']
   };
 
   // line, area
@@ -34,12 +36,40 @@ export class AppComponent {
   title = '';
   content = '';
 
-  constructor(private http: HttpClient) {}
+  loading = false;
 
-  recognise() {
-    console.log(this.title);
+  @ViewChild('mainView') mainView: ElementRef;
 
-    this.http.post('http://ec2-35-176-215-209.eu-west-2.compute.amazonaws.com:7070/v1/predict', {
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.title = 'Amazing galaxy discovery.';
+    this.content = 'Another stunning discovery has just been made as researchers taking part in the deepest ' +
+      'spectroscopic survey ever conducted have found 72 never-before-seen galaxies. Furthermore, as noted by ' +
+      'experts, these new galaxies have the potential to host trillions of alien planets, and some could be ' +
+      'favorable for human life, while others could harbor alien life.';
+    this.recogniseByContent();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.resizeGraphs(this.mainView.nativeElement.offsetWidth - 20, 300);
+  }
+
+  resizeGraphs(width, height) {
+    this.viewMulticlass = [width, height];
+    this.viewBinary = [width, 100];
+  }
+
+  recogniseByURL() {
+
+  }
+
+  recogniseByContent() {
+    this.resizeGraphs(this.mainView.nativeElement.offsetWidth - 20, 300);
+
+    this.loading = true;
+    this.http.post('http://fakenewsrecognition.com/v1/predict', {
       url: this.url,
       title: this.title,
       content: this.content
@@ -47,15 +77,19 @@ export class AppComponent {
       const classes = [];
       for (const c in response.data.classes) {
         if (response.data.classes.hasOwnProperty(c)) {
-          classes.push({name: c, value: response.data.classes[c]});
+          classes.push({ name: c, value: response.data.classes[c] });
         }
       }
 
       this.predictionsMulticlass = classes;
-      this.predictionsBinary = [
-        {name: 'Fake', value: response.data.fake}, 
-        {name: 'Real', value: 1 - response.data.fake}
-      ];
+      this.predictionsBinary = [{
+        name: 'Prediction', series: [
+          { name: 'Fake', value: response.data.fake },
+          { name: 'Real', value: 1 - response.data.fake }
+        ]
+      }];
+
+      this.loading = false;
     });
   }
 }

@@ -1,25 +1,65 @@
-<h1>
-  Fake News Recognition</h1>
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color-dark">
+      <a class="navbar-brand" href="https://fakenewsrecognition.com">Fake News Recognition</a>
+    </nav>
+  </div>
+</header>
 
-<div class="container">
-  <mat-form-field>
-    <input matInput placeholder="Website URL" [(ngModel)]="url">
-  </mat-form-field>
+<p></p>
+<p></p>
 
-  <mat-form-field>
-    <input matInput placeholder="Article title" [(ngModel)]="title">
-  </mat-form-field>
+<main>
+  <div class="container">
 
-  <mat-form-field>
-    <textarea matInput placeholder="Article content (about 300 characters recommended)" [(ngModel)]="content"></textarea>
-  </mat-form-field>
-</div>
+    <div class="card" #mainView>
 
-<button mat-button mat-raised-button (click)="recognise()">Recognise</button>
+      <div class="card-body">
+        <p class="h4 text-center py-4">Recognize article</p>
 
-<ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="predictionsBinary" [legend]="showLegend"
-  [explodeSlices]="explodeSlices" [labels]="showLabels" doughnut="true">
-</ngx-charts-pie-chart>
+        <mat-tab-group>
+          <mat-tab label="By Content">
+            <p></p>
+            <mat-form-field class="input-full-width">
+              <input matInput placeholder="Article title" [(ngModel)]="title">
+            </mat-form-field>
 
-<ngx-charts-pie-grid [view]="view" [scheme]="colorScheme" [results]="predictionsMulticlass">
-</ngx-charts-pie-grid>
+            <mat-form-field class="input-full-width">
+              <textarea matInput placeholder="Article content (~300 characters recommended)" [(ngModel)]="content"></textarea>
+            </mat-form-field>
+
+            <div class="text-center py-4 mt-3">
+                <button mat-button mat-raised-button color="primary" (click)="recogniseByContent()">Recognise</button>
+              </div>
+          </mat-tab>
+          <mat-tab label="By URL">
+            <p></p>
+            <mat-form-field class="input-full-width">
+              <input matInput placeholder="Website URL" [(ngModel)]="url">
+            </mat-form-field>
+
+            <div class="text-center py-4 mt-3">
+                <button mat-button mat-raised-button color="primary" (click)="recogniseByURL()">Recognise</button>
+              </div>
+          </mat-tab>
+        </mat-tab-group>
+
+        <div *ngIf="loading">
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+
+        <div *ngIf="!loading">
+          <ngx-charts-bar-horizontal-stacked [view]="viewBinary" [scheme]="colorScheme" [results]="predictionsBinary" [legend]="showLegend">
+          </ngx-charts-bar-horizontal-stacked>
+
+          <ngx-charts-pie-grid [view]="viewMulticlass" [scheme]="colorScheme" [results]="predictionsMulticlass">
+          </ngx-charts-pie-grid>
+        </div>
+      </div>
+      <!-- Card body -->
+
+    </div>
+
+
+  </div>
+</main>

@@ -100,6 +100,31 @@ def embedded_news_generator(path, batch, fasttext, max_words):
                     batch_i += 1
 
 
+def non_embedded_news_generator(path, batch, index_dict, max_words):
+    while True:
+        with open(path, 'r') as in_news:
+            batch_i = 0
+            batch_embedding = np.zeros((batch, max_words))
+            batch_label = np.zeros((batch, 1))
+            for line in in_news:
+                article = ujson.loads(line)
+
+                embedding_content = np.zeros((max_words))
+                for i, word in enumerate(article['content'][:max_words]):
+                    if word in index_dict:
+                        embedding_content[i] = index_dict[word]
+
+                if (batch_i + 1) == batch:
+                    yield batch_embedding, batch_label
+                    batch_embedding = np.zeros((batch, max_words))
+                    batch_label = np.zeros((batch, 1))
+                    batch_i = 0
+                else:
+                    batch_embedding[batch_i] = embedding_content
+                    batch_label[batch_i, 0] = article['label']
+                    batch_i += 1
+
+
 def embedded_news_generator_separate(path, batch, fasttext, max_words_title, max_words_content):
     while True:
         with open(path, 'r') as in_news:
