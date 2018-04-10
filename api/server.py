@@ -4,7 +4,7 @@ from datetime import datetime
 
 import boto3
 import newspaper
-from flask import Flask, jsonify, abort, request
+from flask import Flask, jsonify, abort, request, send_from_directory
 from flask.json import JSONEncoder
 from flask_mail import Mail
 from voluptuous import Schema, Invalid, Required, Optional
