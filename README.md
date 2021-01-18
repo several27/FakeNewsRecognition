@@ -44,11 +44,12 @@ To run the machines the supplied csv from FakeNewsCorpus needs to preprocessed u
 
 # Look into those counts
 
-ms3u14@myrtle:~/FakeNewsRecognition$ python3 2018-02-21\ -\ count_unique_articles.py 
-8529090it [14:14, 9987.15it/s] 
-Counter all: 8529090
-Counter short_content: 0
-Unique hashes count content: 6248655
-Unique hashes count url: 8462558
-Unique hashes count title_url: 8465409
-Unique hashes count title_content: 7297002
+    ms3u14@myrtle:~/FakeNewsRecognition$ python3 2018-02-21\ -\ count_unique_articles.py 
+    8529090it [14:14, 9987.15it/s] 
+    Counter all: 8529090
+    Counter short_content: 0
+    Unique hashes count content: 6248655
+    Unique hashes count url: 8462558
+    Unique hashes count title_url: 8465409
+    Unique hashes count title_content: 7297002
+
